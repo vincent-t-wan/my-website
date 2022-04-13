@@ -38,13 +38,13 @@
 }
 
 
-.typing-container {
+.greeting {
       display: flex;
       justify-content: center;
       align-items: center;
 }
 
- .input-cursor {
+ .input-line {
       display: inline-block;
       width: 2px;
       height: 42px;
