@@ -1,13 +1,63 @@
 // The section of the website which contains information about me.
 
+//
+async function typeSentence(sentence, eleRef, delay = 100) {
+  const letters = sentence.split("");
+  let i = 0;
+  while(i < letters.length) {
+    await waitForMs(delay);
+    eleRef.append(letters[i]);
+    i++
+  }
+  return;
+}
+
+
+function waitForMs(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms))
+}
+
+async function deleteSentence(eleRef) {
+  const sentence = eleRef.html();
+  const letters = sentence.split("");
+  let i = 0;
+  while(letters.length > 0) {
+    await waitForMs(100);
+    letters.pop();
+    eleRef.html(letters.join(""));
+  }
+}
+
+//
+
+
+
+
+
+
+
 export default function About() {
     return (
         <section id="about">
-
+            <br></br>
             <div className= "greeting">
-                <span id="sentence" class="sentence">std::cout &lt;&lt; Hello! I'm Vincent. &lt;&lt; std::endl;</span>
+
+            
+                <span id="sentence" class="sentence">std::cout &lt;&lt; "Hello! I'm Vincent." &lt;&lt; std::endl;</span>
                 <span class="input-line"></span>
+
+
+                <script>
+                  osuHOW???
+                document.getElementById("sentence") = "ddd";
+
+              </script>
+
+              
+              
             </div>
+
+            
 
           <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
             <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
