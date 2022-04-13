@@ -3,14 +3,18 @@
 import './App.css';
 
 
-function App() {
-  return ( 
-   <>
+import React from "react";
 
-     
-      
-     <footer/> 
-   </>
+export default function App() {
+  return (
+    <main>
+      <Navbar />
+      <About />
+      <Projects />
+      <Skills />
+      <Testimonials />
+      <Contact />
+    </main>
   );
 }
 
