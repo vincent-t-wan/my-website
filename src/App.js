@@ -9,9 +9,14 @@ import './App.css';
 
 function App() {
    return ( 
-    <>
-      <footer/> 
-    </>
+    <main>
+      <Navbar />
+      <About />
+      <Projects />
+      <Skills />
+      <Testimonials />
+      <Contact />
+    </main>
    );
  }
 
