@@ -1,6 +1,7 @@
 // The section of the website containing my projects.
 
-import React from "react";
+import './Projects.css';
+import React, {useEffect} from "react";
 import { projectdata } from "../projectdata";
 
 
@@ -14,50 +15,12 @@ import { SiNodedotjs } from 'react-icons/si'
 import { SiReact } from 'react-icons/si'
 
 
-/*
-
-
-
-              <div className="htmlicon">
-              <SiHtml5 className="htmlicon" />
-
-
-              <div className="cssicon">
-              <SiCss3 className="cssicon" />
-
-
-            
-              <div className="jsicon">
-              <SiJavascript className="jsicon" />
-
-
-
-              <div className="njsicon">
-              <SiNodedotjs className="njsicon" />
-
-              <div className="reacticon">
-              <SiReact className="reacticon" />
-
-
-
-
-*/
-
-
-
 
 export default function Projects() {
     return (
-        <section id="projects" className="text-gray-400 bg-gray-900 body-font">
-          <div className="container px-5 py-10 mx-auto text-center lg:px-40">
-
-
-              <div className="c++icon">
-              <SiCplusplus className="c++icon" />
-
-
-              
-              <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
+        <section id="projects">
+          <div className="projects">
+              <h1>
                 My Projects
               </h1>
               <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
@@ -66,7 +29,14 @@ export default function Projects() {
                 fuga dolore.
               </p>
             </div>
-            <div className="flex flex-wrap -m-4">
+            <div className="project">
+
+              
+
+
+              
+
+
               {projectdata.map((project) => (
                 <a
                   href={project.link}
@@ -85,13 +55,29 @@ export default function Projects() {
                       <h1 className="title-font text-lg font-medium text-white mb-3">
                         {project.title}
                       </h1>
+                      <SiCplusplus className="c++icon" />
+
+              <SiHtml5 className="htmlicon" />
+
+
+    
+              <SiCss3 className="cssicon" />
+
+
+              <SiJavascript className="jsicon" />
+
+
+              <SiNodedotjs className="njsicon" />
+
+            
+              <SiReact className="reacticon" />
+
                       <p className="leading-relaxed">{project.description}</p>
                     </div>
                   </div>
                 </a>
               ))}
             </div>
-          </div>
         </section>
       );
 }

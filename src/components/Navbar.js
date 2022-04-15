@@ -34,14 +34,7 @@ let navbarClasses=['navbar'];
                             <li><a href="#">Contact Me</a></li>
                         </ul>
                     </nav>
-
                 </div>
-
-
-
-
-
-
             </header>
     );
     

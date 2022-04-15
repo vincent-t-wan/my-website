@@ -1,0 +1,28 @@
+.experiences {
+    width: 100%;
+    padding: 0;
+    font-size: 1.4em;
+    font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+    list-style: none;
+    background-color: #ffffff;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    text-align: center;
+}
+
+.experience {
+    width: 100%;
+    padding: 0;
+    font-size: 1.4em;
+    font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+    list-style: none;
+    background-color: #ffffff;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    text-align: center;
+}
+
+.experience img {
+    width: 10%;
+    height: 10%;
+}

@@ -33,8 +33,15 @@
 /*                   */
 
 
+
+
 .App {
   text-align: center;
+}
+
+
+.main {
+	position: relative;
 }
 
 .App-logo {
