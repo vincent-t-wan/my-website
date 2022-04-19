@@ -14,7 +14,10 @@ import { SiJavascript } from 'react-icons/si'
 import { SiNodedotjs } from 'react-icons/si'
 import { SiReact } from 'react-icons/si'
 
+import { SiAndroidstudio } from 'react-icons/si'
+import { SiKotlin } from 'react-icons/si'
 
+import { Link } from "react-router-dom";
 
 export default function Projects() {
     return (
@@ -23,21 +26,71 @@ export default function Projects() {
               <h1>
                 My Projects
               </h1>
+
+
               <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
                 facilis repellat ab cupiditate alias vero aliquid obcaecati quisquam
                 fuga dolore.
               </p>
             </div>
-            <div className="project">
+            <div class="projectgallery">
 
               
 
 
-              
+          
+              {projectdata.map((project) => {
+                const renderCpp = () => {
+                  if (project.tools.includes("C++")) return <SiCplusplus class="cpp" />
+                }
+                const renderHTML = () => {
+                  if (project.tools.includes("HTML")) return <SiHtml5 class="html" />
+                }
+                const renderCSS = () => {
+                  if (project.tools.includes("CSS")) return <SiCss3 class="css" />
+                }
+                const renderJS = () => {
+                  if (project.tools.includes("JavaScript")) return <SiJavascript class="js" />
+                }
+                const renderNJS = () => {
+                  if (project.tools.includes("Node.js")) return <SiNodedotjs class="njs" />
+                }
+                const renderReact = () => {
+                  if (project.tools.includes("React")) return <SiReact class="react" />
+                }
+                const renderAS = () => {
+                  if (project.tools.includes("Android Studio")) return <SiAndroidstudio class="android" />
+                }
+                const renderKotlin = () => {
+                  if (project.tools.includes("Kotlin")) return <SiKotlin class="kotlin" />
+                }
+
+return(
+
+  <div class="square" onClick={() => {window.location.href = project.link}}>
+  <div class="content">
+    {renderCpp()}
+    {renderHTML()}
+    {renderCSS()}
+    {renderJS()}
+    {renderNJS()}
+    {renderReact()}
+    {renderAS()}
+    {renderKotlin()}
+  </div>
+</div>
+
+              )})}
+            </div>
+        </section>
+      );
+}
 
 
-              {projectdata.map((project) => (
+/*
+
+ this goes in return
                 <a
                   href={project.link}
                   key={project.image}
@@ -50,34 +103,14 @@ export default function Projects() {
                     />
                     <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
                       <h2 className="tracking-widest text-sm title-font font-medium text-green-400 mb-1">
-                        {project.subtitle}
+                        {project.tools}
                       </h2>
                       <h1 className="title-font text-lg font-medium text-white mb-3">
                         {project.title}
                       </h1>
-                      <SiCplusplus className="c++icon" />
-
-              <SiHtml5 className="htmlicon" />
-
-
-    
-              <SiCss3 className="cssicon" />
-
-
-              <SiJavascript className="jsicon" />
-
-
-              <SiNodedotjs className="njsicon" />
-
-            
-              <SiReact className="reacticon" />
 
                       <p className="leading-relaxed">{project.description}</p>
                     </div>
                   </div>
                 </a>
-              ))}
-            </div>
-        </section>
-      );
-}
+                */

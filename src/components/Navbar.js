@@ -1,6 +1,7 @@
 // The section of the website with the navigation bar.
 
 import './Navbar.css';
+import myFile from "./resources/wanv-resume.pdf";
 import React, {useEffect} from "react";
 
 
@@ -32,6 +33,7 @@ let navbarClasses=['navbar'];
                             <li><a href="#">Experience</a></li>
                             <li><a href="#">Projects</a></li>
                             <li><a href="#">Contact Me</a></li>
+                            <li><a href={myFile} target="blank">My Resume</a></li>
                         </ul>
                     </nav>
                 </div>

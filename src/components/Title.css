@@ -1,6 +1,9 @@
 
-.greeting {
+.title {
+    background-color: #cdfdda;
+}
 
+.greeting {
     font-size: 4vw;
     font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
     display: flex;
@@ -11,12 +14,14 @@
 }
 
 .greetingsub {
+    font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
     font-size: 2vw;
     text-align: center;
     padding-top: 0.5vw;
 }
 
 .input-line {
+    position: relative;
     display: inline-block;
     width: 2px;
     height: 4.8vw;

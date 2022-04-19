@@ -24,6 +24,7 @@ export async const typeCpp = (state, props) => ({
 
 */
 
+import { Link } from 'react-router-dom'
 
   class Title extends Component {
 

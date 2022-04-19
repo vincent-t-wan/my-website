@@ -4,53 +4,50 @@ import './Experience.css';
 import React, {useEffect} from "react";
 import { experiencedata } from "../experiencedata";
 
+import { SiMicrosoftazure } from 'react-icons/si'
+import { RiComputerLine } from 'react-icons/ri'
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+
+import "react-vertical-timeline-component/style.min.css";
+
+
 export default function Experience() {
-
-
       
     return (
         <section id="experiences">
           <div className="experiences">
-              <h1>
+              <h1 classname="exp">
                 Experience
               </h1>
-              <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
-                facilis repellat ab cupiditate alias vero aliquid obcaecati quisquam
-                fuga dolore.
-              </p>
-            </div>
-            <div className="experience">
+              <VerticalTimeline>
+              {experiencedata.map((experience) => {
+                let isAzure = experience.title.includes("Azure");
+                return(
+                <VerticalTimelineElement 
+                key={experience.id} 
+                date={experience.date}
+                dateClassName="date"
+                icon={isAzure ? <SiMicrosoftazure /> : <RiComputerLine />}
+                iconOnClick={() => {window.location.href = experience.link}}>
+                  <h3 classname="title"><a href={experience.link}>
+                  {experience.title}
+                  </a>
 
+                  </h3>
+                  <h5 classname="subtitle">
+                  {experience.location}
+                  </h5>
+                  <p id="desc">{experience.description}</p>
+                </VerticalTimelineElement>
+
+
+
+                );
+                })}
+              </VerticalTimeline>
+
+            </div>
             
-              
-
-
-              {experiencedata.map((experience) => (
-                <a
-                  href={experience.link}
-                  key={experience.image}
-                  className="sm:w-1/2 w-100 p-4">
-                  <div className="flex relative">
-                    <img
-                      alt="gallery"
-                      className="absolute inset-0 w-full h-full object-cover object-center"
-                      src={require("./" + experience.image)}
-                    />
-                    <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-                      <h2 className="tracking-widest text-sm title-font font-medium text-green-400 mb-1">
-                        {experience.subtitle}
-                      </h2>
-                      <h1 className="title-font text-lg font-medium text-white mb-3">
-                        {experience.title}
-                      </h1>
-
-                      <p className="leading-relaxed">{experience.description}</p>
-                    </div>
-                  </div>
-                </a>
-              ))}
-            </div>
         </section>
       );
 
