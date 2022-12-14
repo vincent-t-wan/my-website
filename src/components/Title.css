@@ -1,4 +1,3 @@
-
 .title {
     background-color: #cdfdda;
 }
@@ -14,10 +13,20 @@
 }
 
 .greetingsub {
+    text-align: center;
+}
+
+.greetingsub p {
     font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
     font-size: 2vw;
-    text-align: center;
     padding-top: 0.5vw;
+}
+
+.greetingsub h6 {
+    font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
+    font-size: 1vw;
+    padding-top: 0.5vw;
+    transform: translate(0px, 2.5vw);
 }
 
 .input-line {
@@ -31,9 +40,28 @@
 }
 
 @keyframes blink {
-0% {opacity: 0;}
-49.5% {opacity: 0;}
-50.5% {opacity: 1;}
-100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+    49.5% {
+        opacity: 0;
+    }
+    50.5% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 20px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}

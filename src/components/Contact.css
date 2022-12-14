@@ -1,67 +1,69 @@
 .cbar {
-    width: 100%;
-    height: 225px;
-    float: left;
-    padding: 0;
-    font-size: 1.4em;
-    font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
-    list-style: none;
-    background-color: #cdfdda;
-    border-bottom: 1px solid;
-    border-top: 1px solid;
-    text-align: center;
-    position: absolute;
-    align-items: center;
+  width: 100%;
+  height: 225px;
+  float: left;
+  padding: 0;
+  font-size: 1.4em;
+  font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+  list-style: none;
+  background-color: #cdfdda;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  text-align: center;
+  position: absolute;
+  align-items: center;
 }
-
 
 .cbar p {
-    text-align: center;
-    font-size: 1.5em;
-    margin-top: 25px;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 25px;
 }
-
 
 .contacts {
-    align-self: center;
-    align-items: center;
-    margin-bottom: 0px;
-    vertical-align: bottom;
-    list-style: none;
-    display: inline-table;
+  align-self: center;
+  align-items: center;
+  margin-bottom: 0px;
+  vertical-align: bottom;
+  list-style: none;
+  display: inline-table;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
-.contacts section {
-    display: inline-block;
-    width: 33.3%;
-}
-
 
 @keyframes pop-up {
-    from {transform:scale(1);}
-    to {transform:scale(1.5);}
+  from {
+    transform: scale(1);
   }
-
-  .white-circle {
-    background: #ffffff;
-    border-radius: 50%;
-    height: 80px;
-    text-align: center;
-      width:80px;
-
-      box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
-      0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+  to {
+    transform: scale(1.5);
   }
+}
 
-  .white-circle:hover{
-    cursor: pointer;
-    animation: pop-up 0.1s ease infinite;
-  }
+.white-circle {
+  margin: auto;
+  background: #ffffff;
+  border-radius: 50%;
+  height: 80px;
+  text-align: center;
+  width: 80px;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
+    0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+}
 
-  .circle-icons {
-    color: black;
-    display: table-cell;
-    height: 87px;
-    vertical-align: middle;
-      width: 80px;
-  }
+.white-circle:hover {
+  cursor: pointer;
+  animation: pop-up 0.1s ease;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.circle-icons {
+  color: black;
+  display: table-cell;
+  height: 87px;
+  vertical-align: middle;
+  width: 80px;
+}

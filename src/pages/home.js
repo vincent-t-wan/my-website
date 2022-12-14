@@ -8,15 +8,14 @@ import Contact from '../components/Contact';
 import React from 'react';
 
 export default function Home() {
-    return (
-     <main>
-         <Navbar />
-         <Title />
-<About />
-<Experience />
-<Projects />
-<Contact />
-     </main>
-     
-    );
-  }
+  return (
+    <main>
+      <Navbar />
+      <Title />
+      <About />
+      <Experience />
+      <Projects />
+      <Contact />
+    </main>
+  );
+}

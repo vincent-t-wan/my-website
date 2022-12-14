@@ -3,12 +3,11 @@ import React from 'react';
 import Main from './Main'
 
 export default function App() {
-   return ( 
+  return (
     <main>
       <div class="app">
-      <Main />
+        <Main />
       </div>
     </main>
-    
-   );
- }
+  );
+}

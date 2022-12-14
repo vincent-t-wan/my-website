@@ -1,7 +1,24 @@
+.exp {
+    width: 100%;
+    padding: 0;
+    font-size: 1.4em;
+    font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+    list-style: none;
+    background-color: #cdfdda;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    text-align: center;
+}
+
+.exp p {
+    font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+}
+
 .experiences {
     position: relative;
     background-color: #cdfdda;
 }
+
 .experiences h1 {
     text-align: center;
     font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
@@ -19,6 +36,7 @@
     text-align: center;
     margin: 0;
 }
+
 .experiences p {
     text-align: center;
     font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
@@ -30,12 +48,9 @@
     transition: all ease-in-out 0.25s;
 }
 
-
 .experiences a:hover {
-        color: rgb(122, 122, 122)
+    color: rgb(122, 122, 122)
 }
-
-
 
 .vertical-timeline-element-content {
     width: 100%;
@@ -43,16 +58,14 @@
     list-style: none;
     background-color: #cdfdda;
     box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
-     0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+        0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
     padding: 2em 3em;
-    word-break:break-word;
+    word-break: break-word;
 }
-
 
 .date {
     font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
 }
-
 
 .vertical-timeline-element-icon {
     cursor: pointer;
@@ -63,7 +76,6 @@
 .vertical-timeline-element-icon:hover {
     background-color: #85a88e;
 }
-
 
 #desc {
     margin: 1.5em 0 2em 0;
