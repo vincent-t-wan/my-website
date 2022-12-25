@@ -3,6 +3,42 @@
 export const projectdata = [
     {
       id: 1,
+      title: "OS-161",
+      tools: "C, Docker",
+      description:
+        "Added new features to the OS-161 Operating System created by Harvard University, including synchronization primitives, system calls, and a smarter virtual memory.",
+      image: "/assets/chessboard.png",
+      link: "https://github.com/vincent-t-wan",
+    },
+    {
+      id: 2,
+      title: "My-Movie-List",
+      tools: "PostgreSQL, Python, React, Docker",
+      description:
+        "Worked with 3 others to create a database-driven movie social networking and social cataloging application website.",
+      image: "/assets/chessboard.png",
+      link: "https://vincentwan123.itch.io/sunset",
+    },
+    {
+      id: 3,
+      title: "Brackey’s Game Jam 2022.2: Sunset",
+      tools: "Unity, C#",
+      description:
+        "Led the team in creating a 2D multiplayer pixel-art platformer following the theme of \"You're not alone\". Created the main menu and game level.",
+      image: "/assets/chessboard.png",
+      link: "https://vincentwan123.itch.io/sunset",
+    },
+    {
+      id: 4,
+      title: "AGL Summer Game Jam 2022: Perfect Fit",
+      tools: "Unity, C#",
+      description:
+        "Worked with two team members to design a game inspired by the game show “Hole in the Wall”. Implemented the main menu and game logic, including how the wall moves and the scoring system.",
+      image: "/assets/chessboard.png",
+      link: "https://dominic-griffith.itch.io/perfect-fit",
+    },
+    {
+      id: 5,
       title: "Chess (cs246 Final Project)",
       tools: "C++",
       description:
@@ -11,7 +47,7 @@ export const projectdata = [
       link: "https://github.com/kaojonathan/chess",
     },
     {
-      id: 2,
+      id: 6,
       title: "Find-Your-Roots",
       tools: "HTML, CSS, JavaScript, PHP",
       description:
@@ -20,7 +56,7 @@ export const projectdata = [
       link: "https://github.com/S-Amman-W/Find-Your-Roots",
     },
     {
-      id: 3,
+      id: 7,
       title: "How2GraduateBCS",
       tools: "Node.js, HTML, JavaScript",
       description:
@@ -29,7 +65,7 @@ export const projectdata = [
       link: "https://github.com/vincent-t-wan/how2graduatebcs-uwaterloo",
     },
     {
-      id: 4,
+      id: 8,
       title: "Note-Taking Application (Android)",
       tools: "Android Studio, Kotlin",
       description:
@@ -38,7 +74,7 @@ export const projectdata = [
       link: "https://github.com/vincent-t-wan/winter2022/tree/main/cs349/a4",
     },
     {
-      id: 5,
+      id: 9,
       title: "Battleship Application",
       tools: "JavaFX, Kotlin",
       description:
@@ -47,7 +83,7 @@ export const projectdata = [
       link: "https://github.com/vincent-t-wan/winter2022/tree/main/cs349/a3",
     },
     {
-      id: 6,
+      id: 10,
       title: "Graphing Application",
       tools: "JavaFX, Kotlin",
       description:
@@ -56,7 +92,7 @@ export const projectdata = [
       link: "https://github.com/vincent-t-wan/winter2022/tree/main/cs349/a2",
     },
     {
-      id: 7,
+      id: 11,
       title: "Note-Taking Application (JavaFX)",
       tools: "JavaFX, Kotlin",
       description:

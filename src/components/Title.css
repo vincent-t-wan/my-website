@@ -24,19 +24,9 @@
 
 .greetingsub h6 {
     font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
-    font-size: 1vw;
+    font-size: 1.1vw;
     padding-top: 0.5vw;
     transform: translate(0px, 2.5vw);
-}
-
-.input-line {
-    position: relative;
-    display: inline-block;
-    width: 2px;
-    height: 4.8vw;
-    background-color: black;
-    margin-left: 3px;
-    animation: blink .6s linear infinite alternate;
 }
 
 @keyframes blink {

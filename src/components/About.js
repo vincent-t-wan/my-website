@@ -3,19 +3,28 @@
 import './About.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AboutTitle from './AboutTitle.js';
-import React, { useEffect } from "react";
-import AboutImage from './resources/me.png';
+import React, { useRef } from "react";
+import AboutImage from './resources/okpic.jpg';
+import useElementOnScreen from '../hooks/useElementOnScreen';
 
 import { FaLinkedinIn } from 'react-icons/fa'
 import { FaGithub } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 
 export default function About() {
+
+  const targetRef = useRef(null);
+  const isVisible = useElementOnScreen({
+    root: null, 
+    rootMargin: '0px', 
+    threshold: 0.4
+  }, targetRef, true);
+
   return (
     <section id="about">
       <div class="AboutStyle">
-        <div class="AboutContainer">
-          <div class="leftAboutSec">
+        <div class="AboutContainer" ref={targetRef}>
+          <div class={`${isVisible ? 'leftAboutSec animated animatedFadeInUp fadeInUp' : 'leftAboutSec'}`} style={{ visibility: `${isVisible ? 'visible' : 'hidden'}` }}>
             <AboutTitle
               heading="About Me"
             />
@@ -34,7 +43,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div class="rightAboutSec">
+          <div class={`${isVisible ? 'rightAboutSec animated animatedFadeInUp fadeInUp' : 'rightAboutSec'}`} style={{ visibility: `${isVisible ? 'visible' : 'hidden'}` }}>
             <img src={AboutImage} alt="" />
           </div>
         </div>

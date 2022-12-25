@@ -1,7 +1,8 @@
 // The section of the website containing my contacts.
 
 import './Contact.css';
-import React, { useEffect } from "react";
+import React, { useRef } from "react";
+import useElementOnScreen from '../hooks/useElementOnScreen';
 
 import { FaLinkedinIn } from 'react-icons/fa'
 import { FaGithub } from 'react-icons/fa'

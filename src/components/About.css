@@ -22,11 +22,14 @@
     
     word-break:break-word;
     max-width: 500px;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     line-height: 1.3rem;
     margin-top: 2rem;
-    @media only screen and (max-width: 768px) {
-        font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .leftAboutSec p {
+        font-size: 1rem;
     }
 }
 
@@ -127,3 +130,45 @@
     vertical-align: middle;
       width:60px;
   }
+
+
+/* FadeInUp Animation */
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}

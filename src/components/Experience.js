@@ -30,7 +30,7 @@ export default function Experience() {
                 key={experience.id}
                 date={experience.date}
                 dateClassName="date"
-                visible={true}
+                visible={false}
                 icon={isAzure ? <SiMicrosoftazure /> : <RiComputerLine />}
                 iconOnClick={() => { window.location.href = experience.link }}>
                 <h3 classname="title"><a href={experience.link}>
