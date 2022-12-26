@@ -5,10 +5,12 @@ nav {
     font-size:1.4vw;
     font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
     list-style: none;
-  background-color: #cdfdda;
-border-bottom: 1px solid;
-border-top: 1px solid;
-position:absolute;
+    background-color: #cdfdda;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    position:absolute;
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
+    0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
 }
 
 nav ul {

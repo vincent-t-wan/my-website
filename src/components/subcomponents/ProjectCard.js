@@ -65,7 +65,7 @@ const ProjectCard = (props) => {
         if (project.tools.includes("Docker")) return <SiDocker class="docker" />
     }
     const renderC = () => {
-        if (project.tools.includes("C")) return <SiC class="c" />
+        if (project.tools.includes("CLanguage")) return <SiC class="c" />
     }
 
     const image = project.image;

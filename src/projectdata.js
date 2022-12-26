@@ -4,10 +4,10 @@ export const projectdata = [
     {
       id: 1,
       title: "OS-161",
-      tools: "C, Docker",
+      tools: "CLanguage, Docker",
       description:
         "Added new features to the OS-161 Operating System created by Harvard University, including synchronization primitives, system calls, and a smarter virtual memory.",
-      image: "/assets/chessboard.png",
+      image: "/assets/os161.png",
       link: "https://github.com/vincent-t-wan",
     },
     {
@@ -16,7 +16,7 @@ export const projectdata = [
       tools: "PostgreSQL, Python, React, Docker",
       description:
         "Worked with 3 others to create a database-driven movie social networking and social cataloging application website.",
-      image: "/assets/chessboard.png",
+      image: "/assets/mymovielist.png",
       link: "https://vincentwan123.itch.io/sunset",
     },
     {
@@ -25,7 +25,7 @@ export const projectdata = [
       tools: "Unity, C#",
       description:
         "Led the team in creating a 2D multiplayer pixel-art platformer following the theme of \"You're not alone\". Created the main menu and game level.",
-      image: "/assets/chessboard.png",
+      image: "/assets/sunset.png",
       link: "https://vincentwan123.itch.io/sunset",
     },
     {
@@ -34,7 +34,7 @@ export const projectdata = [
       tools: "Unity, C#",
       description:
         "Worked with two team members to design a game inspired by the game show “Hole in the Wall”. Implemented the main menu and game logic, including how the wall moves and the scoring system.",
-      image: "/assets/chessboard.png",
+      image: "/assets/perfectfit.png",
       link: "https://dominic-griffith.itch.io/perfect-fit",
     },
     {
