@@ -1,80 +1,50 @@
 // The title section of the website.
 
 import './Title.css';
-import React, {useEffect} from "react";
+import React, { Component } from "react";
+import { TypeAnimation } from 'react-type-animation';
 
-
-//
-async function typeSentence(sentence, eleRef, delay = 100) {
-    const letters = sentence.split("");
-    let i = 0;
-    while(i < letters.length) {
-      await waitForMs(delay);
-      eleRef.append(letters[i]);
-      i++
-    }
-    return;
+class Title extends Component {
+  constructor(props) {
+    super(props);
   }
-  
-  
-  function waitForMs(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms))
-  }
-  
-  async function deleteSentence(eleRef) {
-    const sentence = eleRef.html();
-    const letters = sentence.split("");
-    let i = 0;
-    while(letters.length > 0) {
-      await waitForMs(100);
-      letters.pop();
-      eleRef.html(letters.join(""));
-    }
-  }
-  
-  //
-
-
-
-export default function Title() {
-
-    const [scrolled,setScrolled]=React.useState(true);
-    const handleScroll=() => {
-        const offset=window.scrollY;
-          setScrolled(true);
-      }
-    
-      useEffect(() => {
-        window.addEventListener('scroll',handleScroll)
-      })
-      
-    let navbarClasses=['navbar'];
-      if(scrolled){
-        navbarClasses.push('scrolled');
-      }
-
-
+  render() {
     return (
-
-            <header className={navbarClasses.join(" ")}>
-
-            <div className= "greeting">
-
-            
-                <span id="sentence" class="sentence">std::cout &lt;&lt; "Hello! I'm Vincent." &lt;&lt; std::endl;</span>
-                <span class="input-line"></span>
-
-
-                <script>
-                  osuHOW???
-                document.getElementById("sentence") = "ddd";
-
-              </script>
-
-              </div>
-                </header>
-
-
-
+      <header className={"title"}>
+        <div className="greeting">
+        <TypeAnimation
+          sequence={[
+            'print("Hello! I\'m Vincent.")',
+            5000, // Wait 5s
+            'std::cout << "Hello! I\'m Vincent." << std::endl;',
+            5000, // Wait 5s
+            'console.log(\'Hello! I\'m Vincent.\')',
+            5000, // Wait 5s
+          ]}
+          wrapper="div"
+          cursor={true}
+          repeat={Infinity}
+          style={{ fontSize: '1em' }}
+          className='type'
+        />
+        </div>
+        <div className="greetingsub">
+          <p>
+            A 3A Computer Science student at the University of Waterloo.
+          </p>
+          <h6>Scroll down to learn more about me!</h6>
+          <p><i class="arrow down"></i></p>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+        </div>
+      </header>
     );
+  }
 }
+
+export default Title;
+
+
+

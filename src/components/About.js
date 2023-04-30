@@ -1,55 +1,77 @@
 // The section of the website which contains information about me.
 
 import './About.css';
-import React, {useEffect} from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import AboutTitle from './AboutTitle.js';
+import React, { useRef } from "react";
+import AboutImage from './resources/okpic.jpg';
+import useElementOnScreen from '../hooks/useElementOnScreen';
 
+import { FaLinkedinIn } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
+import { HiOutlineMail } from 'react-icons/hi'
 
-
-
-
-
-
-
-
+import { FaBriefcase } from 'react-icons/fa'
+import { FaGraduationCap } from 'react-icons/fa'
+import { FaCode } from 'react-icons/fa'
+import { FaGamepad } from 'react-icons/fa'
 
 export default function About() {
-    return (
-        <section id="about">
 
+  const targetRef = useRef(null);
+  const isVisible = useElementOnScreen({
+    root: null, 
+    rootMargin: '0px', 
+    threshold: 0.4
+  }, targetRef, true);
 
-            <br></br>        
-
-
-          <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
-            <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-                <br className="hidden lg:inline-block" />I love to build amazing
-                apps.
-              </h1>
-              <p className="mb-8 leading-relaxed">
-                Ever since ... (insert cliche paragraph here)
-              </p>
-              <div className="flex justify-center">
-                <a
-                  href="#contact"
-                  className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
-                  Contacts
-                </a>
-                <a
-                  href="#projects"
-                  className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
-                  My Projects
-                </a>
+  return (
+    <section id="about">
+      <div class="AboutStyle">
+        <div class="AboutContainer" ref={targetRef}>
+          <div class={`${isVisible ? 'leftAboutSec animated animatedFadeInUp fadeInUp' : 'leftAboutSec'}`} style={{ visibility: `${isVisible ? 'visible' : 'hidden'}` }}>
+            <AboutTitle
+              heading="About Me"
+            />
+            <div class="AboutBody">
+              <div class="AboutCategory">
+                <FaGraduationCap size="30px" /> <div class="Education">
+                  <span>3B Bachelor of Computer Science, Honours, Co-op</span>
+                  <br/>
+                  <span>Artificial Intelligence Specialization</span>
+                  <br/>
+                  <span>University of Waterloo, Ontario, Canada</span>
+                  <br/>
+                  <span>Cumulative Average: 92.67%</span>
+                  </div>
+              </div>
+              <div class="AboutCategory">
+                <FaBriefcase size="30px" /> <div class="Internships"><span>Currently looking for Fall 2023 internships.</span></div>
+              </div>
+              <div class="AboutCategory">
+                <FaCode size="30px" /> <div class="Skills"><span>My technical skillset lies in fullstack development and embedded/real-time systems development, as demonstrated by my internships at Yuja and ATS.</span></div>
+              </div>
+              <div class="AboutCategory">
+                <FaGamepad size="30px" /> <div class="Hobbies"><span>My interests lie in the realm of embedded/real-time systems and AI/ML, algonside data science and statistics. Outside of coding, I enjoy playing video games, mathematics, swimming, travelling, and cooking.</span></div>
               </div>
             </div>
-            <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-              <img
-                className="object-cover object-center rounded"
-                alt="hero"
-                src="./coding.svg"
-              />
+            <div class="AboutSecButtons">
+              <div class="container green-diamond" onClick={() => { window.location.href = 'mailto:wanv2002@gmail.com' }}>
+                <div class="diamond-icons"><HiOutlineMail size="30px" /></div>
+              </div>
+              <div class="container green-diamond" onClick={() => { window.location.href = 'https://www.linkedin.com/in/vincent-t-wan/' }}>
+                <div class="diamond-icons"><FaLinkedinIn size="30px" /></div>
+              </div>
+              <div class="container green-diamond" onClick={() => { window.location.href = 'https://www.github.com/vincent-t-wan/' }}>
+                <div class="diamond-icons"><FaGithub size="30px" /></div>
+              </div>
             </div>
           </div>
-        </section>
-      );
+          <div class={`${isVisible ? 'rightAboutSec animated animatedFadeInUp fadeInUp' : 'rightAboutSec'}`} style={{ visibility: `${isVisible ? 'visible' : 'hidden'}` }}>
+            <img src={AboutImage} alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

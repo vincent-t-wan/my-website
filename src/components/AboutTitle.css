@@ -1,0 +1,17 @@
+.abouttitle {
+    text-align: center
+}
+
+.abouttitle h2 {
+    font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+    font-size: 3rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    margin-bottom: 0rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .abouttitle h2 {
+        font-size: 2rem;
+    }
+}
