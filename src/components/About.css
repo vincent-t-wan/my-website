@@ -5,7 +5,6 @@
 }
 
 .AboutContainer {
-    
     font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
     display: flex;
     flex-direction: row;
@@ -18,13 +17,24 @@
     flex: 1;
 }
 
-.leftAboutSec p {
-    
-    word-break:break-word;
+.leftAboutSec .AboutCategory {
+    word-break: break-word;
     max-width: 500px;
     font-size: 1.3rem;
     line-height: 1.3rem;
-    margin-top: 2rem;
+    margin: auto;
+}
+
+.leftAboutSec .AboutBody {
+    margin-top: 0px;
+}
+
+.leftAboutSec .AboutCategory div span {
+    line-height: normal;
+}
+
+.leftAboutSec .AboutCategory:not(:first-child){
+    margin-top: 0.5rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -87,11 +97,6 @@
         text-align: center;
     }
 
-    .leftAboutSec p {
-        margin: 0 auto;
-        margin-top: 2rem;
-    }
-
     .AboutSecButtons {
         flex-direction: row;
         gap: 5rem;
@@ -102,38 +107,39 @@
 @keyframes spin {
     from {transform:rotate(45deg);}
     to {transform:rotate(1125deg);}
-  }
+}
 
-  .green-diamond {
-      margin: auto;
+.green-diamond {
+    margin: auto;
     background: #cdfdda;
     height: 60px;
     text-align: center;
     transform:rotate(45deg);
-      width:60px;
+    width:60px;
 
 
-      border-left: 1px solid;
-      border-right: 1px solid;
-      border-bottom: 1px solid;
-      border-top: 1px solid;
-      box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
-      0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
-  }
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
+    0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+    transition: all ease-in-out 0.25s;
+}
 
-  .green-diamond:hover{
+.green-diamond:hover {
     cursor: pointer;
-    animation: spin 1s ease-out;
-  }
+    background-color: #85a88e;
+}
 
-  .diamond-icons {
+.diamond-icons {
     color: black;
     display: table-cell;
     height: 60px;
     transform: rotate(-45deg);
     vertical-align: middle;
-      width:60px;
-  }
+    width:60px;
+}
 
 
 /* FadeInUp Animation */

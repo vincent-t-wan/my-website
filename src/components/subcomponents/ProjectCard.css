@@ -45,6 +45,10 @@
     cursor: pointer;
   }
   
+  .square.null:hover {
+    cursor: default;
+  }
+
   .square:after {
     content: "";
     display: block;

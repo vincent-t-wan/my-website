@@ -1,4 +1,4 @@
-My personal website.
+My personal website. Made with React, HTML, CSS, and JS.
 
 # Getting Started with Create React App
 

@@ -6,7 +6,7 @@ export const experiencedata = [
     title: "Software Developer at Automation Tooling Systems (ATS)",
     location: "Cambridge, ON",
     description:
-      "Worked on integrating software into control systems.",
+      "Worked on integrating software into control systems. (to-do)",
     image: 'resources/yuja-logo.png',
     buttonText: "see",
     date: "Jan 2023 - Apr 2023",

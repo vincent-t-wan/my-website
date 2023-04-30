@@ -77,14 +77,18 @@ const ProjectCard = (props) => {
         threshold: 0.3
     }, targetRef, true);
     
+    const description = project.description.map((sentence) => {
+        return <p class="bulletpoint">{sentence}</p>
+    })
+
     return (
-        <div onClick={() => { window.location.href = project.link }}
-        class={`${isVisible ? 'square animate pop' : 'square'}`} 
+        <div onClick={project.link != null ? () => { window.location.href = project.link } : null}
+        class={`${isVisible ? 'square animate pop' : 'square'} ${project.link != null ? '' : 'null'}`} 
         style={{ visibility: `${isVisible ? 'visible' : 'hidden'}` }}
         ref={targetRef}
         >
             <img class="project_image" src={`${process.env.PUBLIC_URL}${image}`} />
-            <div class="content">
+            <div class={`content ${project.key}`}>
                 {renderCpp()}
                 {renderHTML()}
                 {renderCSS()}
@@ -102,7 +106,7 @@ const ProjectCard = (props) => {
             </div>
             <div class="project_overlay">
                 <div class="project_title">{project.title}</div>
-                <p class="project_desc">{project.description}</p>
+                <p class={`project_desc ${project.key}`}>{description}</p>
             </div>
         </div>
     )
