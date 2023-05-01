@@ -1,5 +1,7 @@
 // src/data.js
 
+// future idea, make it a gif that plays a demo of the project when hovered
+
 export const projectdata = [
     {
       id: 1,
@@ -78,7 +80,7 @@ export const projectdata = [
       description:
         ["An android application that allows a user to create/manage notes.", "Includes features such as filtering notes by importance and by a search text, deleting notes, randomly creating notes, and clearing notes."],
       image: "/assets/androidnotes.png",
-      link: "https://github.com/vincent-t-wan/winter2022/tree/main/cs349/a4",
+      link: null,
       key: 'notes_android',
     },
     {
@@ -88,7 +90,7 @@ export const projectdata = [
       description:
         ["A JavaFX application featuring the board game Battleship.", "The backend was provided by the professors. I implemented the frontend such as the graphics, the animations, the hit-testing, and the transformations."],
       image: "/assets/battleship.png",
-      link: "https://github.com/vincent-t-wan/winter2022/tree/main/cs349/a3",
+      link: null,
       key: 'battleship',
     },
     {
@@ -98,7 +100,7 @@ export const projectdata = [
       description:
         ["A simple JavaFX graphing application.", "It stores multiple datasets, each with a text title, x and y axis labels, and a list of integer numbers between 0 and 100.", "Selecting a dataset causes a simple bar graph to be shown, alongside basic statistics, and the dataset can be modified.", "Hovering over a bar indicates to the user which bar is being hovered, and clicking a bar \"hides\" it."],
       image: "/assets/graph.png",
-      link: "https://github.com/vincent-t-wan/winter2022/tree/main/cs349/a2",
+      link: null,
       font: '1.1vw',
       key: 'graph',
     },
@@ -109,7 +111,7 @@ export const projectdata = [
       description:
       ["A JavaFX application that allows a user to create/manage notes.", "Includes features such as filtering notes by importance and by a search text, deleting notes, randomly creating notes, and clearing notes.", "Dragging a .txt file onto the application creates a note with its contents."],
       image: "/assets/javafxnotes.png",
-      link: "https://github.com/vincent-t-wan/winter2022/tree/main/cs349/a1",
+      link: null,
       key: 'notes_java',
     },
 

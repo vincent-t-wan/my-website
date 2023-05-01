@@ -1,7 +1,8 @@
 .AboutStyle {
     position: relative;
     background-color: white;
-    padding: 5rem 0;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
 }
 
 .AboutContainer {
@@ -15,13 +16,14 @@
 
 .leftAboutSec {
     flex: 1;
+    margin-left: 2rem;
+    margin-right: 1rem;
 }
 
 .leftAboutSec .AboutCategory {
     word-break: break-word;
-    max-width: 500px;
-    font-size: 1.3rem;
-    line-height: 1.3rem;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
     margin: auto;
 }
 

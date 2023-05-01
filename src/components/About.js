@@ -36,9 +36,7 @@ export default function About() {
             <div class="AboutBody">
               <div class="AboutCategory">
                 <FaGraduationCap size="30px" /> <div class="Education">
-                  <span>3B Bachelor of Computer Science, Honours, Co-op</span>
-                  <br/>
-                  <span>Artificial Intelligence Specialization</span>
+                  <span>3B Bachelor of Computer Science (Artificial Intelligence Specialization), Honours, Co-op</span>
                   <br/>
                   <span>University of Waterloo, Ontario, Canada</span>
                   <br/>

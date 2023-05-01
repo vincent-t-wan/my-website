@@ -25,6 +25,11 @@ export default function Experience() {
         <VerticalTimeline>
           {experiencedata.map((experience) => {
             let isAzure = experience.title.includes("Azure");
+
+            const description = experience.description.map((sentence) => {
+              return <p class="bulletpoint">{sentence}</p>
+            })
+
             return (
               <VerticalTimelineElement
                 key={experience.id}
@@ -40,7 +45,7 @@ export default function Experience() {
                 <h5 classname="subtitle">
                   {experience.location}
                 </h5>
-                <p id="desc">{experience.description}</p>
+                <p id="desc">{description}</p>
               </VerticalTimelineElement>
             );
           })}
