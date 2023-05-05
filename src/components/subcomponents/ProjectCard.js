@@ -82,7 +82,7 @@ const ProjectCard = (props) => {
     })
 
     return (
-        <div onClick={project.link != null ? () => { window.location.href = project.link } : null}
+        <div onClick={project.link != null ? () => { window.open(project.link) } : null}
         class={`${isVisible ? 'square animate pop' : 'square'} ${project.link != null ? '' : 'null'}`} 
         style={{ visibility: `${isVisible ? 'visible' : 'hidden'}` }}
         ref={targetRef}

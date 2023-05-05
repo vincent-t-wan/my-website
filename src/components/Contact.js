@@ -18,10 +18,10 @@ export default function Contact() {
             <div class="container white-circle" onClick={() => { window.location.href = 'mailto:wanv2002@gmail.com' }}>
               <div class="circle-icons"><HiOutlineMail size="30px" /></div>
             </div>
-            <div class="container white-circle" onClick={() => { window.location.href = 'https://www.linkedin.com/in/vincent-t-wan/' }}>
+            <div class="container white-circle" onClick={() => { window.open('https://www.linkedin.com/in/vincent-t-wan/') }}>
               <div class="circle-icons"><FaLinkedinIn size="30px" /></div>
             </div>
-            <div class="container white-circle" onClick={() => { window.location.href = 'https://www.github.com/vincent-t-wan/' }}>
+            <div class="container white-circle" onClick={() => { window.open('https://www.github.com/vincent-t-wan/') }}>
               <div class="circle-icons"><FaGithub size="30px" /></div>
             </div>
           </div>
