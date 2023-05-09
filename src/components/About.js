@@ -47,7 +47,7 @@ export default function About() {
                 <FaBriefcase size="30px" /> <div class="Internships"><span>Currently looking for Fall 2023 internships.</span></div>
               </div>
               <div class="AboutCategory">
-                <FaCode size="30px" /> <div class="Skills"><span>My technical skillset lies in fullstack development and embedded/real-time systems development, as demonstrated by my internships at Yuja and ATS.</span></div>
+                <FaCode size="30px" /> <div class="Skills"><span>My technical skillset lies in fullstack development, as demonstrated by my internships at Yuja and ATS.</span></div>
               </div>
               <div class="AboutCategory">
                 <FaGamepad size="30px" /> <div class="Hobbies"><span>My interests lie in the realm of embedded/real-time systems and AI/ML, alongside data science and statistics. Outside of coding, I enjoy playing video games, mathematics, swimming, travelling, and cooking.</span></div>
