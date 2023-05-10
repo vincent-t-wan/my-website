@@ -50,7 +50,7 @@ export default function About() {
                 <FaCode size="30px" /> <div class="Skills"><span>My technical skillset lies in fullstack development, as demonstrated by my internships at Yuja and ATS.</span></div>
               </div>
               <div class="AboutCategory">
-                <FaGamepad size="30px" /> <div class="Hobbies"><span>My interests lie in the realm of embedded/real-time systems and AI/ML, alongside data science and statistics. Outside of coding, I enjoy playing video games, mathematics, swimming, travelling, and cooking.</span></div>
+                <FaGamepad size="30px" /> <div class="Hobbies"><span>My interests lie in video game development, embedded/real-time systems, AI/ML, and data science. Outside of coding, I enjoy playing video games, mathematics, swimming, travelling, and cooking.</span></div>
               </div>
             </div>
             <div class="AboutSecButtons">
