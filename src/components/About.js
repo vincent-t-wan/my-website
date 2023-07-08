@@ -44,7 +44,7 @@ export default function About() {
                   </div>
               </div>
               <div class="AboutCategory">
-                <FaBriefcase size="30px" /> <div class="Internships"><span>Currently looking for Fall 2023 internships.</span></div>
+                <FaBriefcase size="30px" /> <div class="Internships"><span>I am an incoming software developer at Geotab.</span></div>
               </div>
               <div class="AboutCategory">
                 <FaCode size="30px" /> <div class="Skills"><span>My technical skillset lies in fullstack development, as demonstrated by my internships at Yuja and ATS.</span></div>

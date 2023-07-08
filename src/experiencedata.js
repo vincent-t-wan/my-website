@@ -3,21 +3,32 @@
 export const experiencedata = [
   {
     id: 1,
+    title: "Software Developer at Geotab",
+    location: "Waterloo, Ontario, Canada",
+    description:
+      [""],
+    image: 'resources/geotab.jpg',
+    buttonText: "see",
+    date: "Sep 2023 - Dec 2023",
+    link: "https://www.geotab.com/",
+  },
+  {
+    id: 2,
     title: "Software Developer at Automation Tooling Systems (ATS)",
-    location: "Cambridge, ON",
+    location: "Cambridge, Ontario, Canada",
     description:
       ["Created a user-friendly Python interface for the simulated PLC utilizing byte manipulation in shared memory, enabling clients to program and display real-time statistics through a cross-platform GUI toolkit, thereby significantly increasing the simulation software’s functionalities.",
         "Manually verified servo delay of 7.6 milliseconds by recording shuttle and servo positions and velocities at various master speeds using a high-speed camera and physics modeling tool (Tracker), and determining if the data suggests a linear correlation, enhancing my proficiency in data analysis.",
         "Replaced all “pallet” strings in the simulation software with “shuttle” through cross-team collaboration, including contacting other teams for source files and software to generate diagrams and gifs, thus saving 2 weeks’ worth of work time for the software team."],
-    image: 'resources/yuja-logo.png',
+    image: 'resources/ats.png',
     buttonText: "see",
     date: "Jan 2023 - Apr 2023",
     link: "https://atsautomation.com/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Software Developer at YuJa",
-    location: "North York, ON",
+    location: "North York, Ontario, Canada",
     description:
       ["Developed new features for their Video Conference service such as whiteboard color and highlighting options, emoji reactions to messages, and a permissions dialog, using Java, React, and Redux, increasing customer satisfaction.",
         "Ensured that the Video Conference service follows ARIA accessibility standards by using HTML, CSS, and JavaScript, to make content aria-labeled, tab accessible, and styled to meet the Web Content Accessibility Guidelines (WCAG).",
@@ -28,10 +39,10 @@ export const experiencedata = [
     link: "https://www.yuja.com/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Project Team Member, Microsoft - Azure & Artificial Intelligence Fundamentals",
     subtitle: "Waterloo Experience (WE) Accelerate Program",
-    location: "Waterloo, ON (remote, project-based experience)",
+    location: "Waterloo, Ontario, Canada (remote, project-based experience)",
     description:
       ["Waterloo Experience (WE) Accelerate Program.",
         "Led and fostered a dynamic team of four interns by taking initiative during meetings and making sure everyone stayed on track, gaining valuable leadership and management skills.",

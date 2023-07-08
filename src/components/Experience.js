@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 import { experiencedata } from "../experiencedata";
 
 import { SiMicrosoftazure } from 'react-icons/si'
-import { RiComputerLine } from 'react-icons/ri'
+import { FaCode } from 'react-icons/fa'
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 
 import "react-vertical-timeline-component/style.min.css";
@@ -36,7 +36,7 @@ export default function Experience() {
                 date={experience.date}
                 dateClassName="date"
                 visible={false}
-                icon={isAzure ? <SiMicrosoftazure /> : <RiComputerLine />}
+                icon={isAzure ? <SiMicrosoftazure /> : <FaCode />}
                 iconOnClick={() => { window.open(experience.link) }}>
                 <h3 classname="title"><a href={experience.link} target="_blank">
                   {experience.title}
