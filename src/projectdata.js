@@ -5,6 +5,26 @@
 export const projectdata = [
     {
       id: 1,
+      title: "Grade Analyzer Discord Bot",
+      tools: "JavaScript, Python",
+      description:
+        ["A discord bot that provides functionalities for students and their course grades, such as predicting whether a student should take a certain course, displaying graphs of course grades, and grade comparison with other students.", "Implemented a database server on my Raspberry Pi to store student and grade information.", "Trains a neural network with BERT encodings of all the data to make predictions."],
+      image: "/assets/grade_analyzer.png",
+      link: "https://github.com/vincent-t-wan/grade-analyzer",
+      key: 'grade_analyzer',
+    },
+    {
+      id: 2,
+      title: "Raspberry Pi GPIO",
+      tools: "Python",
+      description:
+        ["A compilation of mini Raspberry Pi projects involving the use of its GPIO pins.", "Such projects include the game \"Simon Says\" and the use of an LCD display."],
+      image: "/assets/raspberrypi.jpg",
+      link: "https://github.com/vincent-t-wan/raspberry-pi",
+      key: 'raspberry_pi',
+    },
+    {
+      id: 3,
       title: "OS-161",
       tools: "CLanguage, Docker",
       description:
@@ -14,7 +34,7 @@ export const projectdata = [
       key: 'os161',
     },
     {
-      id: 2,
+      id: 4,
       title: "My-Movie-List",
       tools: "PostgreSQL, Python, React, Docker",
       description:
@@ -24,7 +44,7 @@ export const projectdata = [
       key: 'my_movie_list',
     },
     {
-      id: 3,
+      id: 5,
       title: "Brackey’s Game Jam 2022.2: Sunset",
       tools: "Unity, C#",
       description:
@@ -34,7 +54,7 @@ export const projectdata = [
       key: 'sunset',
     },
     {
-      id: 4,
+      id: 6,
       title: "AGL Summer Game Jam 2022: Perfect Fit",
       tools: "Unity, C#",
       description:
@@ -44,7 +64,7 @@ export const projectdata = [
       key: 'perfect_fit',
     },
     {
-      id: 5,
+      id: 7,
       title: "Chess (cs246 Final Project)",
       tools: "C++",
       description:
@@ -54,7 +74,7 @@ export const projectdata = [
       key: 'chess',
     },
     {
-      id: 6,
+      id: 8,
       title: "Find-Your-Roots",
       tools: "HTML, CSS, JavaScript, PHP",
       description:
@@ -64,7 +84,7 @@ export const projectdata = [
       key: 'roots',
     },
     {
-      id: 7,
+      id: 9,
       title: "How2GraduateBCS",
       tools: "Node.js, HTML, JavaScript",
       description:
@@ -74,7 +94,7 @@ export const projectdata = [
       key: 'graduate',
     },
     {
-      id: 8,
+      id: 10,
       title: "Note-Taking Application (Android)",
       tools: "Android Studio, Kotlin",
       description:
@@ -84,7 +104,7 @@ export const projectdata = [
       key: 'notes_android',
     },
     {
-      id: 9,
+      id: 11,
       title: "Battleship Application",
       tools: "JavaFX, Kotlin",
       description:
@@ -94,7 +114,7 @@ export const projectdata = [
       key: 'battleship',
     },
     {
-      id: 10,
+      id: 12,
       title: "Graphing Application",
       tools: "JavaFX, Kotlin",
       description:
@@ -105,7 +125,7 @@ export const projectdata = [
       key: 'graph',
     },
     {
-      id: 11,
+      id: 13,
       title: "Note-Taking Application (JavaFX)",
       tools: "JavaFX, Kotlin",
       description:

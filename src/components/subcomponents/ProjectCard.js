@@ -22,6 +22,7 @@ import { SiPython } from 'react-icons/si';
 import { SiDocker } from 'react-icons/si';
 import { SiC } from 'react-icons/si';
 
+
 const ProjectCard = (props) => {
     console.log(props);
     const project = props.project;

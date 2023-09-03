@@ -40,11 +40,11 @@ export default function About() {
                   <br/>
                   <span>University of Waterloo, Ontario, Canada</span>
                   <br/>
-                  <span>Cumulative Average: 92.67%</span>
+                  <span>Cumulative Average: 92.88%</span>
                   </div>
               </div>
               <div class="AboutCategory">
-                <FaBriefcase size="30px" /> <div class="Internships"><span>I am an incoming software developer at Geotab.</span></div>
+                <FaBriefcase size="30px" /> <div class="Internships"><span>I am currently a software developer at Geotab.</span></div>
               </div>
               <div class="AboutCategory">
                 <FaCode size="30px" /> <div class="Skills"><span>My technical skillset lies in fullstack development, as demonstrated by my internships at Yuja and ATS.</span></div>
