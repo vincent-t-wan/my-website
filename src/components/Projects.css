@@ -102,6 +102,10 @@
   font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
 }
 
+.project_desc.grade_analyzer {
+  font-size: 0.9vw;
+}
+
 .project_desc.graph {
   font-size: 0.9vw;
 }

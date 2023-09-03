@@ -11,7 +11,6 @@ export const projectdata = [
         ["A discord bot that provides functionalities for students and their course grades, such as predicting whether a student should take a certain course, displaying graphs of course grades, and comparing grades with other students.", "Implemented a database server on my Raspberry Pi to store student and grade information.", "Trains a neural network with BERT encodings of course names to make predictions."],
       image: "/assets/grade_analyzer.png",
       link: "https://github.com/vincent-t-wan/grade-analyzer",
-      font: '1.1vw',
       key: 'grade_analyzer',
     },
     {
@@ -122,7 +121,6 @@ export const projectdata = [
         ["A simple JavaFX graphing application.", "It stores multiple datasets, each with a text title, x and y axis labels, and a list of integer numbers between 0 and 100.", "Selecting a dataset causes a simple bar graph to be shown, alongside basic statistics, and the dataset can be modified.", "Hovering over a bar indicates to the user which bar is being hovered, and clicking a bar \"hides\" it."],
       image: "/assets/graph.png",
       link: null,
-      font: '1.1vw',
       key: 'graph',
     },
     {
