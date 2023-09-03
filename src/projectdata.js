@@ -5,7 +5,7 @@
 export const projectdata = [
     {
       id: 1,
-      title: "Grade Analyzer Discord Bot",
+      title: "Grade Analyzer",
       tools: "JavaScript, Python",
       description:
         ["A discord bot that provides functionalities for students and their course grades, such as predicting whether a student should take a certain course, displaying graphs of course grades, and comparing grades with other students.", "Implemented a database server on my Raspberry Pi to store student and grade information.", "Trains a neural network with BERT encodings of course names to make predictions."],
