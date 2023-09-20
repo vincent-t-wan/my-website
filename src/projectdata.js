@@ -5,6 +5,16 @@
 export const projectdata = [
     {
       id: 1,
+      title: "Health Harbor",
+      tools: "CockroachDB, Python, React, PostgreSQL",
+      description:
+        ["Used APIs from CockroachDB and Cohere to develop a sophisticated pharmaceutical inventory management application featuring an optimized, scalable database for disease categorization, alongside a powerful AI clustering system utilizing state-of-the-art language models for disease diagnosis and medication recommendations.", "Designed an inventory interface for presenting the current stock of medications, with the medication inventory being sourced from an extensive dataset encompassing detailed medication information, quantities, descriptions, and image URLs.", "Implemented database queries and backend endpoints using CockroachDB, Python, PostgreSQL, and Flask."],
+      image: "/assets/health_harbor.png",
+      link: "https://health.usec.club/search",
+      key: 'health_harbor',
+    },
+    {
+      id: 2,
       title: "Grade Analyzer",
       tools: "JavaScript, Python",
       description:
@@ -14,7 +24,7 @@ export const projectdata = [
       key: 'grade_analyzer',
     },
     {
-      id: 2,
+      id: 3,
       title: "Raspberry Pi GPIO",
       tools: "Python",
       description:
@@ -24,7 +34,7 @@ export const projectdata = [
       key: 'raspberry_pi',
     },
     {
-      id: 3,
+      id: 4,
       title: "OS-161",
       tools: "CLanguage, Docker",
       description:
@@ -34,7 +44,7 @@ export const projectdata = [
       key: 'os161',
     },
     {
-      id: 4,
+      id: 5,
       title: "My-Movie-List",
       tools: "PostgreSQL, Python, React, Docker",
       description:
@@ -44,7 +54,7 @@ export const projectdata = [
       key: 'my_movie_list',
     },
     {
-      id: 5,
+      id: 6,
       title: "Brackey’s Game Jam 2022.2: Sunset",
       tools: "Unity, C#",
       description:
@@ -54,7 +64,7 @@ export const projectdata = [
       key: 'sunset',
     },
     {
-      id: 6,
+      id: 7,
       title: "AGL Summer Game Jam 2022: Perfect Fit",
       tools: "Unity, C#",
       description:
@@ -64,7 +74,7 @@ export const projectdata = [
       key: 'perfect_fit',
     },
     {
-      id: 7,
+      id: 8,
       title: "Chess (cs246 Final Project)",
       tools: "C++",
       description:
@@ -74,7 +84,7 @@ export const projectdata = [
       key: 'chess',
     },
     {
-      id: 8,
+      id: 9,
       title: "Find-Your-Roots",
       tools: "HTML, CSS, JavaScript, PHP",
       description:
@@ -84,7 +94,7 @@ export const projectdata = [
       key: 'roots',
     },
     {
-      id: 9,
+      id: 10,
       title: "How2GraduateBCS",
       tools: "Node.js, HTML, JavaScript",
       description:
@@ -94,7 +104,7 @@ export const projectdata = [
       key: 'graduate',
     },
     {
-      id: 10,
+      id: 11,
       title: "Note-Taking Application (Android)",
       tools: "Android Studio, Kotlin",
       description:
@@ -104,7 +114,7 @@ export const projectdata = [
       key: 'notes_android',
     },
     {
-      id: 11,
+      id: 12,
       title: "Battleship Application",
       tools: "JavaFX, Kotlin",
       description:
@@ -114,7 +124,7 @@ export const projectdata = [
       key: 'battleship',
     },
     {
-      id: 12,
+      id: 13,
       title: "Graphing Application",
       tools: "JavaFX, Kotlin",
       description:
@@ -124,7 +134,7 @@ export const projectdata = [
       key: 'graph',
     },
     {
-      id: 13,
+      id: 14,
       title: "Note-Taking Application (JavaFX)",
       tools: "JavaFX, Kotlin",
       description:

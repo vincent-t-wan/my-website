@@ -22,6 +22,8 @@ import { SiPython } from 'react-icons/si';
 import { SiDocker } from 'react-icons/si';
 import { SiC } from 'react-icons/si';
 
+import { SiCockroachlabs } from 'react-icons/si'
+
 
 const ProjectCard = (props) => {
     console.log(props);
@@ -68,6 +70,9 @@ const ProjectCard = (props) => {
     const renderC = () => {
         if (project.tools.includes("CLanguage")) return <SiC class="c" />
     }
+    const renderCockroachDB = () => {
+        if (project.tools.includes("CockroachDB")) return <SiCockroachlabs class="cockroachdb" />
+    }
 
     const image = project.image;
 
@@ -104,6 +109,7 @@ const ProjectCard = (props) => {
                 {renderPython()}
                 {renderDocker()}
                 {renderC()}
+                {renderCockroachDB()}
             </div>
             <div class="project_overlay">
                 <div class="project_title">{project.title}</div>
