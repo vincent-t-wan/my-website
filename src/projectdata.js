@@ -5,7 +5,7 @@
 export const projectdata = [
     {
       id: 1,
-      title: "Health Harbor",
+      title: "Health Harbor (Hack the North 2023)",
       tools: "CockroachDB, Python, React, PostgreSQL",
       description:
         ["Used APIs from CockroachDB and Cohere to develop a sophisticated pharmaceutical inventory management application featuring an optimized, scalable database for disease categorization, alongside a powerful AI clustering system utilizing state-of-the-art language models for disease diagnosis and medication recommendations.", "Designed an inventory interface for presenting the current stock of medications, with the medication inventory being sourced from an extensive dataset encompassing detailed medication information, quantities, descriptions, and image URLs.", "Implemented database queries and backend endpoints using CockroachDB, Python, PostgreSQL, and Flask."],
