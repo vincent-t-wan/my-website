@@ -6,7 +6,9 @@ export const experiencedata = [
     title: "Software Developer at Geotab",
     location: "Waterloo, Ontario, Canada",
     description:
-      [""],
+      ["Provided data on accumulated fuel and energy values of a vehicle’s lifetime to customers by utilizing Firestore and applying the accumulator pattern on vehicle signals, alongside collaborating with the team to determine optimal signal processing methods, thus giving customers more complex insight into their vehicles.",
+        "Increased the security of customer data by developing a POST API endpoint that redirects fleet credentials to be securely stored in Vault rather than an SQL database.",
+        "Utilized Terraform to relocate a Pub/Sub topic across the entire project and configure permissions for a legacy service to access it, effectively improving the overall infrastructure of the data platform."],
     image: 'resources/geotab.jpg',
     buttonText: "see",
     date: "Sep 2023 - Dec 2023",

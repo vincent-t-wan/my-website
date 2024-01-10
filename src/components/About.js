@@ -36,7 +36,7 @@ export default function About() {
             <div class="AboutBody">
               <div class="AboutCategory">
                 <FaGraduationCap size="30px" /> <div class="Education">
-                  <span>3B Bachelor of Computer Science (Artificial Intelligence Specialization), Honours, Co-op</span>
+                  <span>4A Bachelor of Computer Science with AI Specialization, Minor in Statistics</span>
                   <br/>
                   <span>University of Waterloo, Ontario, Canada</span>
                   <br/>
@@ -44,13 +44,13 @@ export default function About() {
                   </div>
               </div>
               <div class="AboutCategory">
-                <FaBriefcase size="30px" /> <div class="Internships"><span>I am currently a software developer at Geotab.</span></div>
+                <FaBriefcase size="30px" /> <div class="Internships"><span>Currently looking for Spring 2024 internships.</span></div>
               </div>
               <div class="AboutCategory">
-                <FaCode size="30px" /> <div class="Skills"><span>My technical skillset lies in fullstack development, as demonstrated by my internships at Yuja and ATS.</span></div>
+                <FaCode size="30px" /> <div class="Skills"><span>My technical skillset lies in fullstack development, as demonstrated by my internships at Geotab and ATS Corporation.</span></div>
               </div>
               <div class="AboutCategory">
-                <FaGamepad size="30px" /> <div class="Hobbies"><span>My interests lie in video game development, embedded/real-time systems, AI/ML, and data science. Outside of coding, I enjoy playing video games, mathematics, swimming, travelling, and cooking.</span></div>
+                <FaGamepad size="30px" /> <div class="Hobbies"><span>My interests lie in AI/ML, data science, video game development, and embedded/real-time systems. Outside of coding, I enjoy playing video games, mathematics, swimming, travelling, and cooking.</span></div>
               </div>
             </div>
             <div class="AboutSecButtons">

@@ -20,6 +20,8 @@ class Title extends Component {
             5000, // Wait 5s
             'console.log(\'Hello! I\'m Vincent.\')',
             5000, // Wait 5s
+            'Console.WriteLine("Hello! I\'m Vincent.");',
+            5000, // Wait 5s
           ]}
           wrapper="div"
           cursor={true}
@@ -30,7 +32,7 @@ class Title extends Component {
         </div>
         <div className="greetingsub">
           <p>
-            A 3B Computer Science student at the University of Waterloo.
+            A 4A Computer Science student at the University of Waterloo.
           </p>
           <h6>Scroll down to learn more about me!</h6>
           <p><i class="arrow down"></i></p>
