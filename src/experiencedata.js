@@ -3,6 +3,17 @@
 export const experiencedata = [
   {
     id: 1,
+    title: "Software Developer at Dayforce",
+    location: "Toronto, Ontario, Canada",
+    description:
+      ["TODO"],
+    image: 'resources/dayforce.jpg',
+    buttonText: "see",
+    date: "May 2024 - Dec 2024",
+    link: "https://www.dayforce.com/",
+  },
+  {
+    id: 2,
     title: "Software Developer at Geotab",
     location: "Waterloo, Ontario, Canada",
     description:
@@ -15,7 +26,7 @@ export const experiencedata = [
     link: "https://www.geotab.com/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Software Developer at Automation Tooling Systems (ATS)",
     location: "Cambridge, Ontario, Canada",
     description:
@@ -28,7 +39,7 @@ export const experiencedata = [
     link: "https://atsautomation.com/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Software Developer at YuJa",
     location: "North York, Ontario, Canada",
     description:
@@ -41,7 +52,7 @@ export const experiencedata = [
     link: "https://www.yuja.com/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Project Team Member, Microsoft - Azure & Artificial Intelligence Fundamentals",
     subtitle: "Waterloo Experience (WE) Accelerate Program",
     location: "Waterloo, Ontario, Canada (remote, project-based experience)",
