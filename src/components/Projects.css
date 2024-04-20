@@ -110,6 +110,10 @@
   font-size: 0.9vw;
 }
 
+.project_desc.arm {
+  font-size: 0.9vw;
+}
+
 .project_desc.graph {
   font-size: 0.9vw;
 }
