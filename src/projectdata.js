@@ -8,7 +8,7 @@ export const projectdata = [
       title: "ARM Microkernel and Train Control",
       tools: "C",
       description:
-        ["TODO"],
+        ["A robust train control system that drives multiple trains to destinations as quickly as possible while avoiding collisions.", "Runs on a fully written operating system using a combination of C and assembly, featuring context switching, task scheduling, message passing, a name server, event notifications, interrupts and system calls, a clock server, and I/O servers.", "The operating system is deployed to a Raspberry Pi and communicates with the track and trains by sending bytes through a serial line."],
       image: "/assets/arm.jpg",
       link: null,
       key: 'arm',
