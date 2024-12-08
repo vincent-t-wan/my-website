@@ -1,12 +1,15 @@
 // src/experiencedata.js
 
 export const experiencedata = [
-  {
+  { // TODO: add bolded words, and quantified results, to this AND the resume! Also refine the Dayforce one for resume purposes...
     id: 1,
     title: "Software Developer at Dayforce",
     location: "Toronto, Ontario, Canada",
     description:
-      ["TODO"],
+      ["Delivered key features like a revolutionized user interface for generating complex visualizations based on company report datasets that adhere accessibility requirements (Dashboards Pro), as well as cards that provide users with tidbits of important information about the quantitative state of the company based on metrics, with AI generated predictions (Measure Cards), using C#, TypeScript, and React, ensuring alignment with user needs by collaborating closely with Product Managers and designers, hence resulting in a 100% increase in VAS revenue for extensibility and integration services.",
+        "Met tight deadlines for the November and February release of Dashboards Pro by prioritizing critical features like generating report datasets and integrating Dashboards Pro PowerBI visualizations. Actively resolved 2+ critical bugs per sprint and incorporated feedback, delivering on time and ensuring 100% compliance with customer requirements under tight timelines.",
+        "Contributed to 5+ high-impact features, like adding predictions to Measure Cards and enabling multiple reports per dashboard, by refining user stories and streamlining sprint planning, significantly reducing refinement time. Collaborated closely with cross-functional teams to improve product functionality, resulting in a x% increase in user engagement.",
+        "Improved team efficiency by providing detailed status updates during scrum meetings, addressing blockers in backend/frontend code (React, C#) and environment issues. This reduced issue resolution time by x% and increased sprint velocity by x%, enhancing overall team performance."],
     image: 'resources/dayforce.jpg',
     buttonText: "see",
     date: "May 2024 - Dec 2024",
