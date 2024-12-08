@@ -32,7 +32,7 @@ class Title extends Component {
         </div>
         <div className="greetingsub">
           <p>
-            A 4A Computer Science student at the University of Waterloo.
+            A 4B Computer Science student at the University of Waterloo.
           </p>
           <h6>Scroll down to learn more about me!</h6>
           <p><i class="arrow down"></i></p>
