@@ -36,7 +36,7 @@ export default function About() {
             <div class="AboutBody">
               <div class="AboutCategory">
                 <FaGraduationCap size="30px" /> <div class="Education">
-                  <span>4A Bachelor of Computer Science with AI Specialization, Minor in Statistics</span>
+                  <span>4B Bachelor of Computer Science with AI Specialization, Minor in Statistics</span>
                   <br/>
                   <span>University of Waterloo, Ontario, Canada</span>
                   <br/>
