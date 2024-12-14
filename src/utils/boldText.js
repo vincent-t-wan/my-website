@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default BoldText = ({ text }) => {
+const BoldText = ({ text }) => {
 	const regex = /_(.*?)_/g;
 
 	const getBoldText = (text) => {
@@ -14,3 +14,5 @@ export default BoldText = ({ text }) => {
 
 	return <p class="bulletpoint">{getBoldText(text)}</p>;
 };
+
+export default BoldText;
