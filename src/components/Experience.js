@@ -9,6 +9,7 @@ import { FaCode } from 'react-icons/fa'
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 
 import "react-vertical-timeline-component/style.min.css";
+import BoldText from '../utils/boldText';
 
 export default function Experience() {
   return (
@@ -26,9 +27,9 @@ export default function Experience() {
           {experiencedata.map((experience) => {
             let isAzure = experience.title.includes("Azure");
 
-            const description = experience.description.map((sentence) => {
-              return <p class="bulletpoint">{sentence}</p>
-            })
+            const description = experience.description.map((sentence) => (
+              <BoldText text={sentence} />
+            ))
 
             return (
               <VerticalTimelineElement
