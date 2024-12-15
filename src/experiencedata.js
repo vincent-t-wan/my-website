@@ -6,7 +6,7 @@ export const experiencedata = [
     title: "Software Developer at Dayforce",
     location: "Toronto, Ontario, Canada",
     description:
-      ["Delivered an accessible user interface that generates complex visualizations based on company report datasets for the _Government of Canada_, as well as widgets that provide key company metrics with _AI-generated_ predictions for subscribed customers, using _C#, TypeScript, and React_, resulting in a _100% increase_ in VAS revenue for extensibility and integration services",
+      ["Delivered an accessible user interface that generates complex visualizations based on company report datasets for the _Government of Canada_, as well as widgets that provide key company metrics with _AI-generated_ predictions for subscribed customers, using _C#, TypeScript, and React_, resulting in a _100% increase_ in VAS revenue for extensibility and integration services.",
         "Met tight deadlines for the November and February release by prioritizing critical features like generating report datasets and integrating dashboard _PowerBI_ visualizations. Actively resolved _2+_ critical bugs per sprint and incorporated customer feedback, ensuring _100%_ customer compliance.",
         "Contributed to _5+_ high-impact features like integrating multiple datasets within a single dashboard by working closely with senior developers and product managers, collaborating with _cross-functional_ teams, and aligning team goals with business priorities, resulting in a _20% increase_ in overall company communications."],
     image: 'resources/dayforce.jpg',
@@ -47,7 +47,7 @@ export const experiencedata = [
     description:
       ["Developed new features for their Video Conference service such as whiteboard color and highlighting options, emoji reactions to messages, and a permissions dialog, using _Java, React, and Redux_, increasing customer satisfaction.",
         "Ensured that the Video Conference service follows ARIA accessibility standards by using _HTML, CSS, and JavaScript_, to make content aria-labeled, tab accessible, and styled to meet the _Web Content Accessibility Guidelines (WCAG)_.",
-        "Improved my workplace communication skills by closely working with the QA team to fix bugs and successfully release new features that complied with the performance and design expectations of customers."],
+        "Improved my workplace communication skills by closely working with the _QA team_ to fix bugs and successfully release new features that complied with the performance and design expectations of customers."],
     image: 'resources/yuja-logo.png',
     buttonText: "see",
     date: "May 2022 - Aug 2022",
@@ -60,9 +60,9 @@ export const experiencedata = [
     location: "Waterloo, Ontario, Canada (remote, project-based experience)",
     description:
       ["Waterloo Experience (WE) Accelerate Program.",
-        "Led and fostered a _dynamic_ team of four interns by _taking initiative_ during meetings and making sure everyone stayed on track, gaining valuable leadership and management skills.",
+        "Led and fostered a dynamic team of _4_ interns by _taking initiative_ during meetings and making sure everyone stayed on track, gaining valuable leadership and management skills.",
         "Perfected my design thinking skills by _conducting research, brainstorming, and collaborating_ with my team to create a project addressing a solution for the lack of individualized evaluation resources for assistive devices.",
-        "Completed certifications for _Microsoft Azure Fundamentals and Microsoft Azure AI Fundamentals_ from taking their online learning paths consisting of approximately _100 hours_ of content and diligent studying, as a result benefitting my project component."],
+        "Completed certifications for _Microsoft Azure Fundamentals_ and _Microsoft Azure AI Fundamentals_ from taking their online learning paths consisting of approximately _100 hours_ of content and diligent studying, as a result benefitting my project component."],
     image: 'resources/azure.png',
     buttonText: "see",
     date: "May 2021 - Aug 2021",
