@@ -44,7 +44,7 @@ export default function About() {
                   </div>
               </div>
               <div class="AboutCategory">
-                <FaBriefcase size="30px" /> <div class="Internships"><span>Currently a Software Devloper at Dayforce!</span></div>
+                <FaBriefcase size="30px" /> <div class="Internships"><span>Currently seeking 2025 New Grad SWE Roles!</span></div>
               </div>
               <div class="AboutCategory">
                 <FaCode size="30px" /> <div class="Skills"><span>My technical skillset lies in fullstack development, with 2+ years of work experience in React, JavaScript/TypeScript, C#/.NET, and SQL.</span></div>

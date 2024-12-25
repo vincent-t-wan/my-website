@@ -34,11 +34,12 @@ export default function Experience() {
             return (
               <VerticalTimelineElement
                 key={experience.id}
+                className="timeline-element"
+                onTimelineElementClick={() => { window.open(experience.link) }}
                 date={experience.date}
                 dateClassName="date"
                 visible={false}
-                icon={isAzure ? <SiMicrosoftazure /> : <FaCode />}
-                iconOnClick={() => { window.open(experience.link) }}>
+                icon={isAzure ? <SiMicrosoftazure /> : <FaCode />}>
                 <h3 classname="title"><a href={experience.link} target="_blank">
                   {experience.title}
                 </a>

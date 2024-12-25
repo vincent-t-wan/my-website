@@ -51,12 +51,12 @@
   width: 80px;
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
     0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
-  transition: all ease-in-out 0.25s;
+  transition: transform 250ms;
+  cursor: pointer;
 }
 
 .white-circle:hover {
-  cursor: pointer;
-  background-color: #85a88e;
+  transform: translateY(-10px);
 }
 
 .circle-icons {
