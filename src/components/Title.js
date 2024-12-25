@@ -35,8 +35,7 @@ class Title extends Component {
             A 4B Computer Science student at the University of Waterloo.
           </p>
           <h6>Scroll down to learn more about me!</h6>
-          <p><i class="arrow down"></i></p>
-          <br></br>
+          <p className="arrow-container"><i class="arrow down"></i></p>
           <br></br>
           <br></br>
           <br></br>
