@@ -36,21 +36,21 @@ export default function About() {
             <div class="AboutBody">
               <div class="AboutCategory">
                 <FaGraduationCap size="30px" /> <div class="Education">
-                  <span>4B Bachelor of Computer Science with AI Specialization, Minor in Statistics</span>
+                  <span>Bachelor of Computer Science with AI Specialization, Minor in Statistics</span>
                   <br/>
                   <span>University of Waterloo, Ontario, Canada</span>
                   <br/>
-                  <span>Cumulative Average: 92.88%</span>
+                  <span>Cumulative Average: 93.05%</span>
                   </div>
               </div>
               <div class="AboutCategory">
-                <FaBriefcase size="30px" /> <div class="Internships"><span>Currently seeking 2025 New Grad SWE Roles!</span></div>
+                <FaBriefcase size="30px" /> <div class="Internships"><span>Currently an SWE at Dayforce!</span></div>
               </div>
               <div class="AboutCategory">
-                <FaCode size="30px" /> <div class="Skills"><span>My technical skillset lies in fullstack development, with 2+ years of work experience in React, JavaScript/TypeScript, C#/.NET, and SQL.</span></div>
+                <FaCode size="30px" /> <div class="Skills"><span>My technical skillset lies in fullstack development, with 3+ years of work experience in React, JavaScript/TypeScript, C#/.NET, and SQL.</span></div>
               </div>
               <div class="AboutCategory">
-                <FaGamepad size="30px" /> <div class="Hobbies"><span>My interests lie in AI/ML, data science, video game development, and embedded/real-time systems. Outside of coding, I enjoy swimming, playing video games, mathematics, rock climbing, travelling, and cooking!</span></div>
+                <FaGamepad size="30px" /> <div class="Hobbies"><span>My interests lie in AI/ML, data science, video game development, and embedded/real-time systems. Outside of coding, I enjoy rock climbing, video games, mathematics, travelling, and cooking!</span></div>
               </div>
             </div>
             <div class="AboutSecButtons">
