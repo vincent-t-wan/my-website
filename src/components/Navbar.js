@@ -1,7 +1,7 @@
 // The section of the website with the navigation bar.
 
 import './Navbar.css';
-import myFile from "./resources/wanv-resume.pdf";
+import myFile from "./resources/resume-wanv.pdf";
 import React, { useEffect } from "react";
 
 export default function Navbar() {
