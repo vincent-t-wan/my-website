@@ -1,22 +1,11 @@
-/**
- * Navigation bar component
- * Displays navigation links and applies scroll-based styling
- */
-
 import './Navbar.css';
 import myFile from "./resources/resume-wanv.pdf";
-import React, { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { NAV_LINKS } from '../constants';
 
-/**
- * Navbar component with scroll-aware styling
- */
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(true);
 
-  /**
-   * Handles scroll events to update navbar state
-   */
   const handleScroll = useCallback(() => {
     setScrolled(true);
   }, []);
@@ -24,7 +13,6 @@ export default function Navbar() {
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
-    // Cleanup function to remove event listener
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };

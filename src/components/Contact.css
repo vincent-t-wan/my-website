@@ -1,7 +1,3 @@
-/* ===========================================
-   Contact/Footer Section Styles
-   =========================================== */
-
 .cbar {
     width: 100%;
     min-height: 220px;
@@ -24,7 +20,6 @@
     letter-spacing: -0.01em;
 }
 
-/* Contact Icons Container */
 .contacts {
     display: flex;
     flex-direction: row;
@@ -38,7 +33,6 @@
     list-style: none;
 }
 
-/* White Circle Icons */
 .white-circle {
     background: var(--color-background);
     border-radius: var(--radius-full);
@@ -54,14 +48,13 @@
 
 .white-circle:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-soft);
 }
 
 .white-circle:active {
     transform: translateY(-4px);
 }
 
-/* Circle Icons */
 .circle-icons {
     color: var(--color-text);
     display: flex;
@@ -70,7 +63,6 @@
     font-size: 1.5rem;
 }
 
-/* Pop-up Animation */
 @keyframes pop-up {
     from {
         transform: scale(1);
@@ -80,7 +72,6 @@
     }
 }
 
-/* Mobile Adjustments */
 @media only screen and (max-width: 768px) {
     .cbar {
         min-height: 180px;

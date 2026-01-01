@@ -39,7 +39,7 @@ const ProjectCard = ({ project }) => {
         threshold: 0.3
     }, targetRef, true);
 
-    const hasLink = project.link != null;
+    const hasLink = project.link != null || project.pdf != null;
 
     const handleCardClick = () => {
         if (hasLink) {

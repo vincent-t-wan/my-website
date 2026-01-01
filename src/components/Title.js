@@ -1,16 +1,7 @@
-/**
- * Title section component
- * Displays animated typing title with greeting message
- */
-
 import './Title.css';
-import React from "react";
 import { TypeAnimation } from 'react-type-animation';
+import { NAV_LINKS } from '../constants';
 
-/**
- * Animation sequence configuration for the TypeAnimation component
- * Each pair consists of a text string followed by duration in milliseconds
- */
 const ANIMATION_SEQUENCE = [
   'print("Hello! I\'m Vincent.")',
   5000,
@@ -22,9 +13,6 @@ const ANIMATION_SEQUENCE = [
   5000,
 ];
 
-/**
- * Title component displaying animated greeting
- */
 const Title = () => {
   return (
     <header className="title">
@@ -41,9 +29,11 @@ const Title = () => {
       <div className="greetingsub">
         <p>A developer, tech enthusiast, and math enjoyer</p>
         <h6>Scroll down to learn more about me!</h6>
-        <p className="arrow-container">
-          <i className="arrow down"></i>
-        </p>
+        <a href={NAV_LINKS.ABOUT}>
+          <p className="arrow-container">
+            <i className="arrow down"></i>
+          </p>
+        </a>
         <br />
         <br />
         <br />

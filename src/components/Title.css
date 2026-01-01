@@ -1,7 +1,3 @@
-/* ===========================================
-   Hero/Title Section Styles
-   =========================================== */
-
 .title {
     background-color: var(--color-primary);
     min-height: 100vh;
@@ -12,7 +8,6 @@
     position: relative;
 }
 
-/* Code-styled typing animation container */
 .greeting {
     font-size: clamp(1.2rem, 2.5vw, 2rem);
     display: flex;
@@ -23,23 +18,23 @@
     letter-spacing: 0;
 }
 
-/* Terminal/code block styling for the typing animation */
 .greeting .type {
     font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Source Code Pro', 'Consolas', 'Monaco', monospace;
     background-color: #1e1e1e;
     color: #d4d4d4;
     padding: 1.5rem 2rem;
-    border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    box-shadow: var(--shadow-soft);
     position: relative;
-    min-width: 320px;
+    min-width: 1000px;
     border: 1px solid #333;
+    min-height: 100px;
+    border-radius: 0 0 8px 8px;
+    margin-top: 1.8rem;
+    padding-left: 2.5rem;
 }
 
-/* Terminal window dots decoration */
 .greeting .type::before {
-    content: '● ● ●';
+    content: '●';
     position: absolute;
     top: -1.8rem;
     left: 0;
@@ -57,13 +52,6 @@
     box-sizing: border-box;
 }
 
-/* Adjust main code block to connect with header */
-.greeting .type {
-    border-radius: 0 0 8px 8px;
-    margin-top: 1.8rem;
-}
-
-/* Line number styling */
 .greeting .type::after {
     content: '1';
     position: absolute;
@@ -72,12 +60,7 @@
     transform: translateY(-50%);
     font-size: 0.8em;
     color: #858585;
-    opacity: 0.6;
-}
-
-/* Adjust padding to make room for line number */
-.greeting .type {
-    padding-left: 2.5rem;
+    opacity: 0.6 !important;
 }
 
 .greetingsub {
@@ -104,7 +87,6 @@
     letter-spacing: 0.05em;
 }
 
-/* Blinking Animation for Text */
 @keyframes blink {
     0%, 49.5% {
         opacity: 0;
@@ -114,7 +96,6 @@
     }
 }
 
-/* Animated Down Arrow */
 .arrow {
     border: solid var(--color-text);
     border-width: 0 3px 3px 0;
@@ -147,7 +128,6 @@
     cursor: pointer;
 }
 
-/* Mobile Adjustments */
 @media only screen and (max-width: 768px) {
     .greeting {
         padding-top: 25vw;

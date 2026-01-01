@@ -1,8 +1,3 @@
-/**
- * About section component
- * Displays information about the user including education, work, skills, and social links
- */
-
 import './About.css';
 import PropTypes from 'prop-types';
 import AboutTitle from './AboutTitle.js';
@@ -57,25 +52,14 @@ AboutCategory.propTypes = {
   className: PropTypes.string.isRequired,
 };
 
-/**
- * Handles opening external URLs in a new window
- * @param {string} url - URL to open
- */
 const openExternalLink = (url) => {
   window.open(url);
 };
 
-/**
- * Handles navigating to email
- * @param {string} email - Email address (mailto: format)
- */
 const openEmailLink = (email) => {
   window.location.href = email;
 };
 
-/**
- * Main About section component
- */
 export default function About() {
   const targetRef = useRef(null);
   const isVisible = useElementOnScreen({

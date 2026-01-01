@@ -1,7 +1,3 @@
-/**
- * Tool to Icon mapping configuration
- * Maps project tools/technologies to their corresponding icons and CSS classes
- */
 import {
   SiCplusplus,
   SiHtml5,
@@ -23,10 +19,6 @@ import {
   SiFirebase,
 } from 'react-icons/si';
 
-/**
- * Configuration object mapping tool names to their icon components and CSS classes
- * @type {Object.<string, {icon: React.ComponentType, className: string}>}
- */
 export const TOOL_ICON_MAP = {
   'C++': { icon: SiCplusplus, className: 'cpp' },
   'HTML': { icon: SiHtml5, className: 'html' },
@@ -48,8 +40,4 @@ export const TOOL_ICON_MAP = {
   'Openai': { icon: SiOpenai, className: 'openai' },
 };
 
-/**
- * Get the list of tool names that are supported
- * @returns {string[]} Array of supported tool names
- */
 export const getSupportedTools = () => Object.keys(TOOL_ICON_MAP);

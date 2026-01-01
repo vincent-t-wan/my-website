@@ -1,4 +1,3 @@
-/* Base Reset and Global Styles */
 *,
 *::before,
 *::after {
@@ -31,20 +30,17 @@ code {
         monospace;
 }
 
-/* Improved link defaults */
 a {
     text-decoration: none;
     color: inherit;
 }
 
-/* Better image defaults */
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* Selection styling using existing color scheme */
 ::selection {
     background-color: #cdfdda;
     color: #000;

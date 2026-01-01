@@ -1,8 +1,3 @@
-/**
- * Custom hook for detecting when an element is visible on screen
- * Uses the Intersection Observer API to track element visibility
- */
-
 import { useEffect, useState, useMemo, useCallback } from "react";
 
 /**
@@ -18,15 +13,8 @@ import { useEffect, useState, useMemo, useCallback } from "react";
 const useElementOnScreen = (options, targetRef, oneTime = false) => {
   const [isVisible, setIsVisible] = useState(false);
 
-  /**
-   * Memoize options to prevent unnecessary re-renders
-   */
   const optionsMemo = useMemo(() => options, [options]);
 
-  /**
-   * Callback function for the Intersection Observer
-   * @param {IntersectionObserverEntry[]} entries - Array of intersection entries
-   */
   const handleIntersection = useCallback((entries) => {
     const [entry] = entries;
 

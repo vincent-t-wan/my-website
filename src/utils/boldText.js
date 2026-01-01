@@ -1,14 +1,6 @@
-/**
- * BoldText utility component
- * Renders text with bold formatting for content wrapped in underscores
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 
-/**
- * Regular expression to match text wrapped in underscores
- */
 const BOLD_TEXT_REGEX = /_(.*?)_/g;
 
 /**
@@ -29,11 +21,6 @@ const parseBoldText = (text) => {
   });
 };
 
-/**
- * BoldText component
- * @param {Object} props - Component props
- * @param {string} props.text - Text to render with bold formatting
- */
 const BoldText = ({ text }) => {
   return <p className="bulletpoint">{parseBoldText(text)}</p>;
 };

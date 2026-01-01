@@ -1,7 +1,3 @@
-/* ===========================================
-   Projects Section Styles
-   =========================================== */
-
 .projects {
     width: 100%;
     padding: var(--spacing-lg) 0;
@@ -33,7 +29,6 @@
     border-radius: 2px;
 }
 
-/* Project Gallery Grid */
 .projectgallery {
     padding: var(--spacing-xl) var(--spacing-md);
     width: 100%;
@@ -60,13 +55,12 @@
     transition: var(--transition-normal);
     box-shadow: var(--shadow-soft);
     border-radius: var(--radius-sm);
-    overflow: hidden;
 }
 
 .square:hover {
     cursor: pointer;
     transform: translateY(-8px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-soft);
 }
 
 .square.null:hover {
@@ -81,7 +75,6 @@
     padding-bottom: 100%;
 }
 
-/* Project Content Area */
 .content {
     position: absolute;
     width: 100%;
@@ -90,7 +83,6 @@
     margin-bottom: 0;
 }
 
-/* Project Image */
 .project_image {
     position: absolute;
     display: block;
@@ -99,7 +91,6 @@
     object-fit: cover;
 }
 
-/* Project Overlay */
 .project_overlay {
     position: absolute;
     top: 0;
@@ -115,7 +106,6 @@
     opacity: 0;
     transition: opacity var(--transition-normal);
     padding: 0.75rem;
-    overflow: hidden;
 }
 
 .project_overlay > * {
@@ -131,7 +121,6 @@
     opacity: 1;
 }
 
-/* Project Title */
 .project_title {
     font-size: 0.95rem;
     font-family: var(--font-heading);
@@ -140,7 +129,6 @@
     text-align: center;
 }
 
-/* Project Description */
 .project_desc {
     margin-top: 0;
     font-size: 0.75rem;
@@ -149,13 +137,8 @@
     max-width: 95%;
     opacity: 0.95;
     text-align: center;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
 }
 
-/* Mobile Adjustments */
 @media only screen and (max-width: 768px) {
     .projects h1 {
         font-size: 2rem;

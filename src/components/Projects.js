@@ -1,16 +1,7 @@
-/**
- * Projects section component
- * Displays a gallery of project cards
- */
-
 import './Projects.css';
-import React from "react";
 import ProjectCard from './subcomponents/ProjectCard';
 import { projectdata } from "../projectdata";
 
-/**
- * Projects component displaying the project showcase section
- */
 export default function Projects() {
   return (
     <section id="projects">
