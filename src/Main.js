@@ -1,16 +1,37 @@
-import React from 'react';
-import { Switch, Routes, Route } from 'react-router-dom';
+/**
+ * Main router component
+ * Defines application routes
+ */
 
-import Home from './pages/home'
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Home from './pages/home';
 import Chess from './pages/chess';
 
+/**
+ * Route configuration
+ */
+const ROUTES = [
+  { path: '/', component: Home, exact: true },
+  { path: '/chess', component: Chess, exact: true },
+];
+
+/**
+ * Main component - handles routing
+ */
 const Main = () => {
   return (
-    <Switch>    
-      <Route exact path='/' component={Home}></Route>
-      <Route exact path='/chess' component={Chess}></Route>
+    <Switch>
+      {ROUTES.map((route) => (
+        <Route
+          key={route.path}
+          exact={route.exact}
+          path={route.path}
+          component={route.component}
+        />
+      ))}
     </Switch>
   );
-}
+};
 
 export default Main;

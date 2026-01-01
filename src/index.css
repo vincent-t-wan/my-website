@@ -1,22 +1,56 @@
-html,body
-{
+/* Base Reset and Global Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
     width: 100%;
     height: auto;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+/* Improved link defaults */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Better image defaults */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Selection styling using existing color scheme */
+::selection {
+    background-color: #cdfdda;
+    color: #000;
+}
+
+::-moz-selection {
+    background-color: #cdfdda;
+    color: #000;
 }

@@ -1,186 +1,206 @@
+/* ===========================================
+   About Section Styles
+   =========================================== */
+
 .AboutStyle {
     position: relative;
-    background-color: white;
-    padding-top: 3rem;
-    padding-bottom: 5rem;
+    background-color: var(--color-background);
+    padding: var(--spacing-lg) var(--spacing-md);
+    padding-bottom: var(--spacing-xl);
 }
 
 .AboutContainer {
-    font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
+    font-family: var(--font-body);
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: var(--spacing-lg);
 }
 
+/* Left Section - Text Content */
 .leftAboutSec {
     flex: 1;
-    margin-left: 2rem;
-    margin-right: 1rem;
+    padding: 0 var(--spacing-md);
 }
 
 .leftAboutSec .AboutCategory {
     word-break: break-word;
-    font-size: 1.2rem;
-    line-height: 1.2rem;
+    font-size: 1.15rem;
+    line-height: 1.6;
     margin: auto;
 }
 
 .leftAboutSec .AboutBody {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .leftAboutSec .AboutCategory div span {
-    line-height: normal;
+    line-height: 1.6;
 }
 
-.leftAboutSec .AboutCategory:not(:first-child){
-    margin-top: 0.5rem;
+.leftAboutSec .AboutCategory:not(:first-child) {
+    margin-top: var(--spacing-sm);
 }
 
-@media only screen and (max-width: 768px) {
-    .leftAboutSec p {
-        font-size: 1rem;
-    }
-}
-
+/* Right Section - Image */
 .rightAboutSec {
     flex: 1;
-}
-
-.abouttitle {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .rightAboutSec img {
-    border-radius: 50%;
-    width: 500px;
-    height: 500px;
-    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
-    0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+    border-radius: var(--radius-full);
+    width: clamp(280px, 100%, 450px);
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-slow);
 }
 
+.rightAboutSec img:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+/* About Section Buttons */
 .AboutSecButtons {
     display: flex;
     position: relative;
-    justify-content: space-between;
-    gap: 5rem;
-    margin-top: 2rem;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-md);
 }
 
-@media only screen and (max-width: 950px) {
-    .leftAboutSec {
-        flex: 4;
-
-    }
-    .rightAboutSec {
-        flex: 3;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .AboutContainer {
-        flex-direction: column;
-        text-align: center;
-
-
-    }
-    .leftAboutSec {
-        width: 100%;
-    }
-
-    .rightAboutSec {
-        width: 100%;
-        margin-top: 3rem;
-    }
-
-    .abouttitle {
-        text-align: center;
-    }
-
-    .AboutSecButtons {
-        flex-direction: row;
-        gap: 5rem;
-    }
-
-}
-
-@keyframes spin {
-    from {transform:rotate(45deg);}
-    to {transform:rotate(1125deg);}
-}
-
+/* Green Diamond Button */
 .green-diamond {
     margin: auto;
-    background: #cdfdda;
-    height: 60px;
+    background: var(--color-primary);
+    height: 55px;
+    width: 55px;
     text-align: center;
-    transform:rotate(45deg);
-    width:60px;
-
-
-    border-left: 1px solid;
-    border-right: 1px solid;
-    border-bottom: 1px solid;
-    border-top: 1px solid;
-    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
-    0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
-    transition: transform 250ms;
+    transform: rotate(45deg);
+    border: 1px solid var(--color-text);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-normal);
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .green-diamond:hover {
-    transform: rotate(45deg) translate(-7px, -7px);
+    transform: rotate(45deg) translate(-5px, -5px);
+    box-shadow: var(--shadow-hover);
 }
 
 .diamond-icons {
-    color: black;
-    display: table-cell;
-    height: 60px;
+    color: var(--color-text);
     transform: rotate(-45deg);
-    vertical-align: middle;
-    width:60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 
 /* FadeInUp Animation */
-
 @keyframes fadeInUp {
     from {
-        transform: translate3d(0,40px,0)
+        transform: translate3d(0, 40px, 0);
+        opacity: 0;
     }
-
     to {
-        transform: translate3d(0,0,0);
-        opacity: 1
-    }
-}
-
-@-webkit-keyframes fadeInUp {
-    from {
-        transform: translate3d(0,40px,0)
-    }
-
-    to {
-        transform: translate3d(0,0,0);
-        opacity: 1
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
     }
 }
 
 .animated {
     animation-duration: 1s;
     animation-fill-mode: both;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-fill-mode: both
 }
 
 .animatedFadeInUp {
-    opacity: 0
+    opacity: 0;
 }
 
 .fadeInUp {
     opacity: 0;
     animation-name: fadeInUp;
-    -webkit-animation-name: fadeInUp;
+}
+
+/* Spin Animation */
+@keyframes spin {
+    from {
+        transform: rotate(45deg);
+    }
+    to {
+        transform: rotate(1125deg);
+    }
+}
+
+/* About Title */
+.abouttitle {
+    text-align: center;
+}
+
+/* Tablet Adjustments */
+@media only screen and (max-width: 950px) {
+    .leftAboutSec {
+        flex: 1.2;
+    }
+
+    .rightAboutSec {
+        flex: 0.8;
+    }
+
+    .rightAboutSec img {
+        width: clamp(200px, 100%, 350px);
+    }
+}
+
+/* Mobile Adjustments */
+@media only screen and (max-width: 768px) {
+    .AboutStyle {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .AboutContainer {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+
+    .leftAboutSec {
+        width: 100%;
+        padding: 0;
+    }
+
+    .leftAboutSec p,
+    .leftAboutSec .AboutCategory {
+        font-size: 1rem;
+    }
+
+    .rightAboutSec {
+        width: 100%;
+        margin-top: var(--spacing-md);
+    }
+
+    .rightAboutSec img {
+        width: clamp(200px, 80%, 300px);
+    }
+
+    .AboutSecButtons {
+        flex-direction: row;
+        gap: var(--spacing-lg);
+    }
+
+    .green-diamond {
+        height: 50px;
+        width: 50px;
+    }
 }

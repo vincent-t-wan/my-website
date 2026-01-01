@@ -1,17 +1,43 @@
+/* ===========================================
+   About Title Styles
+   =========================================== */
+
 .abouttitle {
-    text-align: center
+    text-align: center;
+    margin-bottom: var(--spacing-md);
 }
 
 .abouttitle h2 {
-    font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
-    font-size: 3rem;
-    margin-top: 0.5rem;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3rem, 3.5rem);
+    margin-top: var(--spacing-xs);
+    margin-bottom: 0;
     text-align: center;
-    margin-bottom: 0rem;
+    letter-spacing: -0.02em;
+    position: relative;
+    display: inline-block;
 }
 
+.abouttitle h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+}
+
+/* Mobile Adjustments */
 @media only screen and (max-width: 768px) {
     .abouttitle h2 {
         font-size: 2rem;
+    }
+
+    .abouttitle h2::after {
+        width: 40px;
+        height: 2px;
     }
 }

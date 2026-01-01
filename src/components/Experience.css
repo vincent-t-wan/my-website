@@ -1,84 +1,149 @@
+/* ===========================================
+   Experience/Timeline Section Styles
+   =========================================== */
+
 .exp {
     width: 100%;
-    padding: 0;
-    font-size: 1.4em;
-    font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
-    list-style: none;
-    background-color: #cdfdda;
-    border-bottom: 1px solid;
-    border-top: 1px solid;
+    padding: var(--spacing-lg) 0;
+    font-family: var(--font-heading);
+    background-color: var(--color-primary);
+    border-bottom: 1px solid var(--color-text);
+    border-top: 1px solid var(--color-text);
     text-align: center;
+    position: relative;
 }
 
-.exp p {
-    font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+.exp h1 {
+    font-size: 2.5rem;
+    margin: 0 0 0.75rem 0;
+    letter-spacing: -0.02em;
+    position: relative;
+    display: inline-block;
+}
+
+.exp h1::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-text);
+    border-radius: 2px;
 }
 
 .experiences {
     position: relative;
-    background-color: #cdfdda;
+    background-color: var(--color-primary);
+    padding: var(--spacing-lg) var(--spacing-md);
 }
 
 .experiences h1 {
     text-align: center;
-    font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
-    font-size: 2em;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    letter-spacing: -0.01em;
 }
 
 .experiences h3 {
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.2rem;
     margin: 0;
-    color: #000;
+    color: var(--color-text);
+    font-weight: 600;
 }
 
 .experiences h5 {
     text-align: center;
-    margin: 0;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
 .experiences p {
     text-align: center;
-    font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 .experiences a {
-    color: #000;
+    color: var(--color-text);
     text-decoration: none;
-    transition: all ease-in-out 0.25s;
+    transition: var(--transition-normal);
+    border-bottom: 1px solid transparent;
 }
 
+.experiences a:hover {
+    border-bottom-color: var(--color-text);
+}
+
+/* Timeline Element Content */
 .vertical-timeline-element-content {
     width: 100%;
-    font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
-    list-style: none;
-    background-color: #cdfdda;
-    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
-        0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
-    padding: 2em 3em;
+    font-family: var(--font-heading);
+    background-color: var(--color-primary);
+    box-shadow: var(--shadow-soft);
+    padding: 2em 2.5em;
     word-break: break-word;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .date {
-    font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
+    font-family: var(--font-body);
+    opacity: 0.75;
+    font-size: 0.9em;
 }
 
+/* Timeline Icon */
 .vertical-timeline-element-icon {
-    background-color: #cdfdda;
-    transition: all ease-in-out 0.25s;
+    background-color: var(--color-primary);
+    transition: var(--transition-normal);
+    border: 2px solid var(--color-text);
 }
 
 #desc {
     margin: 1.5em 0 2em 0;
+    font-size: 0.95em;
+    line-height: 1.7;
 }
 
-.timeline-element
-{
-    cursor: pointer;
-    transition: transform 250ms;
+/* Timeline Element Hover Effect */
+.timeline-element {
+    transition: transform var(--transition-normal);
 }
 
-.timeline-element:hover
-{
-    transform: translateY(-10px);
+.timeline-element:hover {
+    transform: translateY(-8px);
+}
+
+.timeline-element:hover .vertical-timeline-element-content {
+    box-shadow: var(--shadow-hover);
+}
+
+/* Mobile Adjustments */
+@media only screen and (max-width: 768px) {
+    .exp h1 {
+        font-size: 2rem;
+    }
+
+    .exp h1::after {
+        width: 50px;
+        height: 2px;
+    }
+
+    .experiences {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .vertical-timeline-element-content {
+        padding: 1.5em 1.5em;
+    }
+
+    .experiences h1 {
+        font-size: 1.5rem;
+    }
 }

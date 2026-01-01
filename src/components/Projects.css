@@ -1,163 +1,191 @@
+/* ===========================================
+   Projects Section Styles
+   =========================================== */
+
 .projects {
-  width: 100%;
-  padding: 0;
-  font-size: 1.4em;
-  font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
-  list-style: none;
-  background-color: #ffffff;
-  border-bottom: 1px solid;
-  border-top: 1px solid;
-  text-align: center;
+    width: 100%;
+    padding: var(--spacing-lg) 0;
+    font-family: var(--font-heading);
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-text);
+    border-top: 1px solid var(--color-text);
+    text-align: center;
+    position: relative;
 }
 
+.projects h1 {
+    font-size: 2.5rem;
+    margin: 0 0 0.75rem 0;
+    letter-spacing: -0.02em;
+    position: relative;
+    display: inline-block;
+}
 
+.projects h1::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-text);
+    border-radius: 2px;
+}
 
+/* Project Gallery Grid */
 .projectgallery {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  width: 100%;
-  font-size: 1.4em;
-  font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
-  list-style: none;
-  background-color: #ffffff;
-  border-bottom: 1px solid;
-  border-top: 1px solid;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
+    padding: var(--spacing-xl) var(--spacing-md);
+    width: 100%;
+    font-family: var(--font-heading);
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-text);
+    border-top: 1px solid var(--color-text);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: clamp(20px, 4vw, 50px);
+    flex-wrap: wrap;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
+/* Project Card */
 .square {
-  position: relative;
-  width: 20%;
-  background-color: #cdfdda;
-  border: 2px solid;
-  border-color: black;
-  margin: 0;
-  transition: all ease-in-out 0.25s;
-  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
-  0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+    position: relative;
+    width: clamp(180px, 20%, 280px);
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-text);
+    margin: 0;
+    transition: var(--transition-normal);
+    box-shadow: var(--shadow-soft);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
 }
 
-.square:after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
+.square:hover {
+    cursor: pointer;
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
 }
 
+.square.null:hover {
+    cursor: default;
+    transform: none;
+    box-shadow: var(--shadow-soft);
+}
+
+.square::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+/* Project Content Area */
 .content {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  margin-bottom: 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0;
 }
 
+/* Project Image */
 .project_image {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height:100%;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
+/* Project Overlay */
 .project_overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.25s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-overlay);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    padding: 0.75rem;
+    overflow: hidden;
 }
 
-.project_overlay>* {
-  transform: translateY(20px);
-  transition: transform 0.25s;
+.project_overlay > * {
+    transform: translateY(15px);
+    transition: transform var(--transition-normal);
 }
 
-.project_overlay:hover>* {
-  transform: translateY(0);
+.project_overlay:hover > * {
+    transform: translateY(0);
 }
 
 .project_overlay:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
+/* Project Title */
 .project_title {
-  font-size: 1.5vw;
-  font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+    font-size: 0.95rem;
+    font-family: var(--font-heading);
+    margin-bottom: 0.35rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
+/* Project Description */
 .project_desc {
-  margin-top: 0.25em;
-  font-size: 1.1vw;
-  font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
+    margin-top: 0;
+    font-size: 0.75rem;
+    font-family: var(--font-body);
+    line-height: 1.35;
+    max-width: 95%;
+    opacity: 0.95;
+    text-align: center;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
-.project_desc.health_harbor {
-  font-size: 0.75vw;
+/* Mobile Adjustments */
+@media only screen and (max-width: 768px) {
+    .projects h1 {
+        font-size: 2rem;
+    }
+
+    .projects h1::after {
+        width: 50px;
+        height: 2px;
+    }
+
+    .projectgallery {
+        padding: var(--spacing-lg) var(--spacing-sm);
+        gap: 20px;
+    }
+
+    .square {
+        width: clamp(140px, 42%, 200px);
+    }
+
+    .project_title {
+        font-size: 0.9rem;
+    }
+
+    .project_desc {
+        font-size: 0.75rem;
+    }
 }
 
-.project_desc.grade_analyzer {
-  font-size: 0.9vw;
-}
-
-.project_desc.arm {
-  font-size: 0.8vw;
-}
-
-.project_desc.graph {
-  font-size: 0.9vw;
-}
-
-.project_desc.notes_java {
-  font-size: 1vw;
-}
-
-.project_desc.survey {
-  font-size: 0.8vw;
-}
-
-.project_desc.aiorrealnews {
-  font-size: 0.8vw;
-}
-
-.cpp:hover {
-  cursor: pointer;
-}
-
-.html:hover {
-  cursor: pointer;
-}
-
-.css:hover {
-  cursor: pointer;
-}
-
-.js:hover {
-  cursor: pointer;
-}
-
-.njs:hover {
-  cursor: pointer;
-}
-
-.react:hover {
-  cursor: pointer;
-}
-
-.android:hover {
-  cursor: pointer;
-}
-
-.kotlin:hover {
-  cursor: pointer;
+@media only screen and (max-width: 480px) {
+    .square {
+        width: clamp(130px, 45%, 180px);
+    }
 }

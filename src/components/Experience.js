@@ -1,53 +1,67 @@
-// The section of the website containing my work experience.
+/**
+ * Experience section component
+ * Displays work experience in a vertical timeline format
+ */
 
 import './Experience.css';
-import React, { useEffect } from "react";
+import React from "react";
 import { experiencedata } from "../experiencedata";
-
-import { SiMicrosoftazure } from 'react-icons/si'
-import { FaCode } from 'react-icons/fa'
+import { SiMicrosoftazure } from 'react-icons/si';
+import { FaCode } from 'react-icons/fa';
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
-
 import "react-vertical-timeline-component/style.min.css";
 import BoldText from '../utils/boldText';
 
+/**
+ * Determines the appropriate icon based on experience title
+ * @param {string} title - Experience title
+ * @returns {React.ReactNode} Icon component
+ */
+const getExperienceIcon = (title) => {
+  return title.includes("Azure") ? <SiMicrosoftazure /> : <FaCode />;
+};
+
+/**
+ * Handles opening external link in new window
+ * @param {string} link - URL to open
+ */
+const handleTimelineClick = (link) => {
+  window.open(link);
+};
+
+/**
+ * Experience component displaying work history
+ */
 export default function Experience() {
   return (
     <section id="experiences">
       <div className="exp">
-        <h1>
-          Experience
-        </h1>
-        <p>
-          Here is my experience!
-        </p>
+        <h1>Experience</h1>
       </div>
       <div className="experiences">
         <VerticalTimeline>
           {experiencedata.map((experience) => {
-            let isAzure = experience.title.includes("Azure");
-
-            const description = experience.description.map((sentence) => (
-              <BoldText text={sentence} />
-            ))
+            const descriptionElements = experience.description.map((sentence, index) => (
+              <BoldText key={index} text={sentence} />
+            ));
 
             return (
               <VerticalTimelineElement
                 key={experience.id}
                 className="timeline-element"
-                onTimelineElementClick={() => { window.open(experience.link) }}
+                onTimelineElementClick={() => handleTimelineClick(experience.link)}
                 date={experience.date}
                 dateClassName="date"
                 visible={false}
-                icon={isAzure ? <SiMicrosoftazure /> : <FaCode />}>
-                <h3 classname="title"><a href={experience.link} target="_blank">
-                  {experience.title}
-                </a>
+                icon={getExperienceIcon(experience.title)}
+              >
+                <h3 className="title">
+                  <a href={experience.link} target="_blank" rel="noopener noreferrer">
+                    {experience.title}
+                  </a>
                 </h3>
-                <h5 classname="subtitle">
-                  {experience.location}
-                </h5>
-                <p id="desc">{description}</p>
+                <h5 className="subtitle">{experience.location}</h5>
+                <p id="desc">{descriptionElements}</p>
               </VerticalTimelineElement>
             );
           })}
