@@ -1,84 +1,125 @@
 .exp {
     width: 100%;
-    padding: 0;
-    font-size: 1.4em;
-    font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
-    list-style: none;
-    background-color: #cdfdda;
-    border-bottom: 1px solid;
-    border-top: 1px solid;
+    padding: var(--spacing-lg) 0 var(--spacing-sm) 0;
+    font-family: var(--font-heading);
+    background-color: var(--color-primary);
     text-align: center;
+    position: relative;
 }
 
-.exp p {
-    font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+.exp h1 {
+    font-size: clamp(1.5rem, 2rem, 2.5rem);
+    margin: 0 0 0 0;
+    letter-spacing: -0.02em;
+    position: relative;
+    display: inline-block;
 }
 
 .experiences {
     position: relative;
-    background-color: #cdfdda;
+    background-color: var(--color-primary);
+    padding-right: var(--spacing-md);
+    padding-left: var(--spacing-md);
+    padding-bottom: var(--spacing-lg);
 }
 
 .experiences h1 {
     text-align: center;
-    font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
-    font-size: 2em;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    letter-spacing: -0.01em;
 }
 
 .experiences h3 {
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.2rem;
     margin: 0;
-    color: #000;
+    color: var(--color-text);
+    font-weight: 600;
+    min-height: auto;
+    background-color: white;
 }
 
 .experiences h5 {
     text-align: center;
-    margin: 0;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
 .experiences p {
     text-align: center;
-    font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 .experiences a {
-    color: #000;
-    text-decoration: none;
-    transition: all ease-in-out 0.25s;
+    color: var(--color-text);
 }
 
+.experiences a:hover {
+    border-bottom-color: var(--color-text);
+}
+
+/* Timeline Element Content */
 .vertical-timeline-element-content {
     width: 100%;
-    font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
-    list-style: none;
-    background-color: #cdfdda;
-    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
-        0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
-    padding: 2em 3em;
+    font-family: var(--font-heading);
+    background-color: var(--color-primary);
+    padding: 2em 2.5em;
     word-break: break-word;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-soft) !important;
 }
 
 .date {
-    font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
+    font-family: var(--font-body);
+    opacity: 0.75;
+    font-size: 0.9em;
 }
 
 .vertical-timeline-element-icon {
-    background-color: #cdfdda;
-    transition: all ease-in-out 0.25s;
+    background-color: var(--color-primary);
+    transition: var(--transition-normal);
 }
 
 #desc {
     margin: 1.5em 0 2em 0;
+    font-size: 0.95em;
+    line-height: 1.7;
 }
 
-.timeline-element
-{
+.timeline-element {
+    transition: transform var(--transition-normal);
+}
+
+.timeline-element:hover {
     cursor: pointer;
-    transition: transform 250ms;
+    transform: translateY(-8px);
 }
 
-.timeline-element:hover
-{
-    transform: translateY(-10px);
+@media only screen and (max-width: 768px) {
+    .exp h1 {
+        font-size: 1.5rem;
+    }
+
+    .exp h1::after {
+        width: 50px;
+        height: 2px;
+    }
+
+    .experiences {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .vertical-timeline-element-content {
+        padding: 1.5em 1.5em;
+    }
+
+    .experiences h1 {
+        font-size: 1.5rem;
+    }
 }

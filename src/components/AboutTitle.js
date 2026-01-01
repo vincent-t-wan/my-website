@@ -1,14 +1,18 @@
-import React from 'react'
+import PropTypes from 'prop-types';
 import './AboutTitle.css';
 
-export default function AboutTitle({
-    heading = 'About Me'
-}) {
-    return (
-        <div class="abouttitle">
-            <h2>
-                {heading}
-            </h2>
-        </div>
-    )
+export default function AboutTitle({ heading }) {
+  return (
+    <div className="abouttitle">
+      <h2>{heading}</h2>
+    </div>
+  );
 }
+
+AboutTitle.propTypes = {
+  heading: PropTypes.string,
+};
+
+AboutTitle.defaultProps = {
+  heading: 'About Me',
+};

@@ -1,51 +1,45 @@
-// The title section of the website.
-
 import './Title.css';
-import React, { Component } from "react";
 import { TypeAnimation } from 'react-type-animation';
+import { NAV_LINKS } from '../constants';
 
-class Title extends Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <header className={"title"}>
-        <div className="greeting">
+const ANIMATION_SEQUENCE = [
+  'print("Hello! I\'m Vincent.")',
+  5000,
+  'std::cout << "Hello! I\'m Vincent." << std::endl;',
+  5000,
+  'console.log(\'Hello! I\'m Vincent.\')',
+  5000,
+  'Console.WriteLine("Hello! I\'m Vincent.");',
+  5000,
+];
+
+const Title = () => {
+  return (
+    <header className="title">
+      <div className="greeting">
         <TypeAnimation
-          sequence={[
-            'print("Hello! I\'m Vincent.")',
-            5000, // Wait 5s
-            'std::cout << "Hello! I\'m Vincent." << std::endl;',
-            5000, // Wait 5s
-            'console.log(\'Hello! I\'m Vincent.\')',
-            5000, // Wait 5s
-            'Console.WriteLine("Hello! I\'m Vincent.");',
-            5000, // Wait 5s
-          ]}
+          sequence={ANIMATION_SEQUENCE}
           wrapper="div"
           cursor={true}
           repeat={Infinity}
           style={{ fontSize: '1em' }}
-          className='type'
+          className="type"
         />
-        </div>
-        <div className="greetingsub">
-          <p>
-            A developer, tech enthusiast, and math enjoyer
+      </div>
+      <div className="greetingsub">
+        <p>A developer, tech enthusiast, and math enjoyer</p>
+        <h6>Scroll down to learn more about me!</h6>
+        <a href={NAV_LINKS.ABOUT}>
+          <p className="arrow-container">
+            <i className="arrow down"></i>
           </p>
-          <h6>Scroll down to learn more about me!</h6>
-          <p className="arrow-container"><i class="arrow down"></i></p>
-          <br></br>
-          <br></br>
-          <br></br>
-        </div>
-      </header>
-    );
-  }
-}
+        </a>
+        <br />
+        <br />
+        <br />
+      </div>
+    </header>
+  );
+};
 
 export default Title;
-
-
-

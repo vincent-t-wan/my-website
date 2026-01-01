@@ -1,71 +1,121 @@
-// The section of the website which contains information about me.
-
 import './About.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from 'prop-types';
 import AboutTitle from './AboutTitle.js';
 import React, { useRef } from "react";
 import AboutImage from './resources/okpic.jpg';
 import useElementOnScreen from '../hooks/useElementOnScreen';
+import { SOCIAL_LINKS, INTERSECTION_OBSERVER_OPTIONS } from '../constants';
 
-import { FaLinkedinIn } from 'react-icons/fa'
-import { FaGithub } from 'react-icons/fa'
-import { HiOutlineMail } from 'react-icons/hi'
+import { FaLinkedinIn, FaGithub, FaBriefcase, FaGraduationCap, FaCode, FaGamepad } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
 
-import { FaBriefcase } from 'react-icons/fa'
-import { FaGraduationCap } from 'react-icons/fa'
-import { FaCode } from 'react-icons/fa'
-import { FaGamepad } from 'react-icons/fa'
+/**
+ * SocialButton component for reusable social link buttons
+ * @param {Object} props - Component props
+ * @param {React.ReactNode} props.icon - Icon element to display
+ * @param {Function} props.onClick - Click handler function
+ * @param {string} props.className - CSS class name for styling
+ */
+const SocialButton = ({ icon, onClick, className }) => (
+  <div className={`container ${className}`} onClick={onClick}>
+    <div className="diamond-icons">{icon}</div>
+  </div>
+);
+
+SocialButton.propTypes = {
+  icon: PropTypes.node.isRequired,
+  onClick: PropTypes.func.isRequired,
+  className: PropTypes.string,
+};
+
+SocialButton.defaultProps = {
+  className: 'green-diamond',
+};
+
+/**
+ * AboutCategory component for individual about section items
+ * @param {Object} props - Component props
+ * @param {React.ReactNode} props.icon - Icon element to display
+ * @param {React.ReactNode} props.children - Content to display
+ * @param {string} props.className - CSS class name for the content wrapper
+ */
+const AboutCategory = ({ icon, children, className }) => (
+  <div className="AboutCategory">
+    {icon}
+    <div className={className}>{children}</div>
+  </div>
+);
+
+AboutCategory.propTypes = {
+  icon: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string.isRequired,
+};
+
+const openExternalLink = (url) => {
+  window.open(url);
+};
+
+const openEmailLink = (email) => {
+  window.location.href = email;
+};
 
 export default function About() {
-
   const targetRef = useRef(null);
   const isVisible = useElementOnScreen({
-    root: null, 
-    rootMargin: '0px', 
+    ...INTERSECTION_OBSERVER_OPTIONS,
     threshold: 0.4
   }, targetRef, true);
 
+  const visibilityStyle = { visibility: isVisible ? 'visible' : 'hidden' };
+  const animatedClass = isVisible ? 'animated animatedFadeInUp fadeInUp' : '';
+
   return (
     <section id="about">
-      <div class="AboutStyle">
-        <div class="AboutContainer" ref={targetRef}>
-          <div class={`${isVisible ? 'leftAboutSec animated animatedFadeInUp fadeInUp' : 'leftAboutSec'}`} style={{ visibility: `${isVisible ? 'visible' : 'hidden'}` }}>
-            <AboutTitle
-              heading="About Me"
-            />
-            <div class="AboutBody">
-              <div class="AboutCategory">
-                <FaGraduationCap size="30px" /> <div class="Education">
-                  <span>Bachelor of Computer Science with AI Specialization, Minor in Statistics</span>
-                  <br/>
-                  <span>University of Waterloo, Ontario, Canada</span>
-                  <br/>
-                  <span>Cumulative Average: 93.05%</span>
-                  </div>
-              </div>
-              <div class="AboutCategory">
-                <FaBriefcase size="30px" /> <div class="Internships"><span>Currently an SWE at Dayforce!</span></div>
-              </div>
-              <div class="AboutCategory">
-                <FaCode size="30px" /> <div class="Skills"><span>My technical skillset lies in fullstack development, with 3+ years of work experience in React, JavaScript/TypeScript, C#/.NET, and SQL.</span></div>
-              </div>
-              <div class="AboutCategory">
-                <FaGamepad size="30px" /> <div class="Hobbies"><span>My interests lie in AI/ML and data science. Outside of coding, I enjoy rock climbing, video games, mathematics, travelling, and cooking!</span></div>
-              </div>
+      <div className="AboutStyle">
+        <div className="AboutContainer" ref={targetRef}>
+          <div
+            className={`leftAboutSec ${animatedClass}`}
+            style={visibilityStyle}
+          >
+            <AboutTitle heading="About Me" />
+            <div className="AboutBody">
+              <AboutCategory icon={<FaGraduationCap size="30px" />} className="Education">
+                <span>Bachelor of Computer Science with AI Specialization, Minor in Statistics</span>
+                <br/>
+                <span>University of Waterloo, Ontario, Canada</span>
+                <br/>
+                <span>Cumulative Average: 93.05%</span>
+              </AboutCategory>
+              <AboutCategory icon={<FaBriefcase size="30px" />} className="Internships">
+                <span>Currently an SWE at Dayforce!</span>
+              </AboutCategory>
+              <AboutCategory icon={<FaCode size="30px" />} className="Skills">
+                <span>My technical skillset lies in fullstack development, with 3+ years of work experience in React, JavaScript/TypeScript, C#/.NET, and SQL.</span>
+              </AboutCategory>
+              <AboutCategory icon={<FaGamepad size="30px" />} className="Hobbies">
+                <span>My interests lie in AI/ML and data science. Outside of coding, I enjoy rock climbing, video games, mathematics, travelling, and cooking!</span>
+              </AboutCategory>
             </div>
-            <div class="AboutSecButtons">
-              <div class="container green-diamond" onClick={() => { window.location.href = 'mailto:wanv2002@gmail.com' }}>
-                <div class="diamond-icons"><HiOutlineMail size="30px" /></div>
-              </div>
-              <div class="container green-diamond" onClick={() => { window.open('https://www.linkedin.com/in/vincent-t-wan/') }}>
-                <div class="diamond-icons"><FaLinkedinIn size="30px" /></div>
-              </div>
-              <div class="container green-diamond" onClick={() => { window.open('https://www.github.com/vincent-t-wan/') }}>
-                <div class="diamond-icons"><FaGithub size="30px" /></div>
-              </div>
+            <div className="AboutSecButtons">
+              <SocialButton
+                icon={<HiOutlineMail size="30px" />}
+                onClick={() => openEmailLink(SOCIAL_LINKS.EMAIL)}
+              />
+              <SocialButton
+                icon={<FaLinkedinIn size="30px" />}
+                onClick={() => openExternalLink(SOCIAL_LINKS.LINKEDIN)}
+              />
+              <SocialButton
+                icon={<FaGithub size="30px" />}
+                onClick={() => openExternalLink(SOCIAL_LINKS.GITHUB)}
+              />
             </div>
           </div>
-          <div class={`${isVisible ? 'rightAboutSec animated animatedFadeInUp fadeInUp' : 'rightAboutSec'}`} style={{ visibility: `${isVisible ? 'visible' : 'hidden'}` }}>
+          <div
+            className={`rightAboutSec ${animatedClass}`}
+            style={visibilityStyle}
+          >
             <img src={AboutImage} alt="" />
           </div>
         </div>
