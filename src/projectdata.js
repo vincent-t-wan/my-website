@@ -2,9 +2,42 @@
 
 // future idea, make it a gif that plays a demo of the project when hovered
 
+import Linear from "./components/resources/linear.pdf";
+import Survey from "./components/resources/survey.pdf";
+
 export const projectdata = [
     {
       id: 1,
+      title: "AI-Generated vs. Real News Game",
+      tools: "Python, React, Firebase, Openai",
+      description:
+        ["Designed an educational, research-backed website and interactive quiz game that helps users distinguish real news from AI-generated and fake news while highlighting the social impact of misinformation.", "Built a 12-round browser-based game with real-time feedback, taxonomy-driven misinformation indicators, case studies, and historical context to reinforce critical news-evaluation skills.", "Conducted a pilot study showing that structured education significantly improves users' ability to detect AI-generated misinformation, emphasizing the importance of public awareness and media literacy."],
+      image: "/assets/realorfake.jpg",
+      link: "https://real-or-fake-news-game.netlify.app",
+      key: 'aiorrealnews',
+    },
+    {
+      id: 2,
+      title: "Survey on Advanced Equilibrium-Finding Techniques in Imperfect Information Extensive Form Games",
+      tools: "",
+      description:
+        ["Survey paper on equilibrium computation in imperfect-information extensive-form games.", "Examines three influential approaches: enhanced MCCFR, predictive Blackwell approachability, and meta-learning frameworks, analyzing their theory, strengths, limitations, and directions for future research."],
+      image: "/assets/survey.png",
+      pdf: Survey,
+      key: 'survey',
+    },
+    {
+      id: 4,
+      title: "Housing Price Prediction Linear Model",
+      tools: "RStudio",
+      description:
+        ["Developed a high-performing linear regression model to predict Toronto housing prices using feature engineering, data transformations, interaction terms, and stepwise selection.", "Ranked 1st in model accuracy among 50+ peers."],
+      image: "/assets/linear.jpg",
+      pdf: Linear,
+      key: 'linearstat',
+    },
+    {
+      id: 5,
       title: "ARM Microkernel and Train Control",
       tools: "C",
       description:
@@ -14,7 +47,7 @@ export const projectdata = [
       key: 'arm',
     },
     {
-      id: 2,
+      id: 6,
       title: "Health Harbor (Hack the North 2023)",
       tools: "CockroachDB, Python, React, PostgreSQL",
       description:
@@ -24,7 +57,7 @@ export const projectdata = [
       key: 'health_harbor',
     },
     {
-      id: 3,
+      id: 7,
       title: "Grade Analyzer",
       tools: "JavaScript, Python",
       description:
@@ -34,7 +67,7 @@ export const projectdata = [
       key: 'grade_analyzer',
     },
     {
-      id: 4,
+      id: 8,
       title: "Raspberry Pi GPIO",
       tools: "Python",
       description:
@@ -44,7 +77,7 @@ export const projectdata = [
       key: 'raspberry_pi',
     },
     {
-      id: 5,
+      id: 9,
       title: "OS-161",
       tools: "CLanguage, Docker",
       description:
@@ -54,7 +87,7 @@ export const projectdata = [
       key: 'os161',
     },
     {
-      id: 6,
+      id: 10,
       title: "My-Movie-List",
       tools: "PostgreSQL, Python, React, Docker",
       description:
@@ -64,7 +97,7 @@ export const projectdata = [
       key: 'my_movie_list',
     },
     {
-      id: 7,
+      id: 11,
       title: "Brackey’s Game Jam 2022.2: Sunset",
       tools: "Unity, C#",
       description:
@@ -74,7 +107,7 @@ export const projectdata = [
       key: 'sunset',
     },
     {
-      id: 8,
+      id: 12,
       title: "AGL Summer Game Jam 2022: Perfect Fit",
       tools: "Unity, C#",
       description:
@@ -84,7 +117,7 @@ export const projectdata = [
       key: 'perfect_fit',
     },
     {
-      id: 9,
+      id: 13,
       title: "Chess (cs246 Final Project)",
       tools: "C++",
       description:
@@ -94,7 +127,7 @@ export const projectdata = [
       key: 'chess',
     },
     {
-      id: 10,
+      id: 14,
       title: "Find-Your-Roots (Hack the North 2021)",
       tools: "HTML, CSS, JavaScript, PHP",
       description:
@@ -104,7 +137,7 @@ export const projectdata = [
       key: 'roots',
     },
     {
-      id: 11,
+      id: 15,
       title: "How2GraduateBCS",
       tools: "Node.js, HTML, JavaScript",
       description:
@@ -114,7 +147,7 @@ export const projectdata = [
       key: 'graduate',
     },
     {
-      id: 12,
+      id: 16,
       title: "Note-Taking Application (Android)",
       tools: "Android Studio, Kotlin",
       description:
@@ -124,7 +157,7 @@ export const projectdata = [
       key: 'notes_android',
     },
     {
-      id: 13,
+      id: 17,
       title: "Battleship Application",
       tools: "JavaFX, Kotlin",
       description:
@@ -134,7 +167,7 @@ export const projectdata = [
       key: 'battleship',
     },
     {
-      id: 14,
+      id: 18,
       title: "Graphing Application",
       tools: "JavaFX, Kotlin",
       description:
@@ -144,7 +177,7 @@ export const projectdata = [
       key: 'graph',
     },
     {
-      id: 15,
+      id: 19,
       title: "Note-Taking Application (JavaFX)",
       tools: "JavaFX, Kotlin",
       description:

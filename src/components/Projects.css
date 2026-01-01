@@ -122,6 +122,14 @@
   font-size: 1vw;
 }
 
+.project_desc.survey {
+  font-size: 0.8vw;
+}
+
+.project_desc.aiorrealnews {
+  font-size: 0.8vw;
+}
+
 .cpp:hover {
   cursor: pointer;
 }

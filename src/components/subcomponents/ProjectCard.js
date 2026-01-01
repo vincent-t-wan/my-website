@@ -24,9 +24,11 @@ import { SiC } from 'react-icons/si';
 
 import { SiCockroachlabs } from 'react-icons/si'
 
+import { SiOpenai } from "react-icons/si";
+import { SiRstudio } from "react-icons/si";
+import { SiFirebase } from "react-icons/si";
 
 const ProjectCard = (props) => {
-    console.log(props);
     const project = props.project;
     const renderCpp = () => {
         if (project.tools.includes("C++")) return <SiCplusplus class="cpp" />
@@ -73,48 +75,62 @@ const ProjectCard = (props) => {
     const renderCockroachDB = () => {
         if (project.tools.includes("CockroachDB")) return <SiCockroachlabs class="cockroachdb" />
     }
+    const renderFirebase = () => {
+        if (project.tools.includes("Firebase")) return <SiFirebase class="firebase" />
+    }
+    const renderR = () => {
+        if (project.tools.includes("RStudio")) return <SiRstudio class="r" />
+    }
+    const renderOpenai = () => {
+        if (project.tools.includes("Openai")) return <SiOpenai class="openai" />
+    }
 
     const image = project.image;
 
     const targetRef = useRef(null);
     const isVisible = useElementOnScreen({
-        root: null, 
-        rootMargin: '0px', 
+        root: null,
+        rootMargin: '0px',
         threshold: 0.3
     }, targetRef, true);
-    
+
     const description = project.description.map((sentence) => {
         return <p class="bulletpoint">{sentence}</p>
     })
 
     return (
         <div onClick={project.link != null ? () => { window.open(project.link) } : null}
-        class={`${isVisible ? 'square animate pop' : 'square'} ${project.link != null ? '' : 'null'}`} 
-        style={{ visibility: `${isVisible ? 'visible' : 'hidden'}` }}
-        ref={targetRef}
+            class={`${isVisible ? 'square animate pop' : 'square'} ${project.link != null ? '' : 'null'}`}
+            style={{ visibility: `${isVisible ? 'visible' : 'hidden'}` }}
+            ref={targetRef}
         >
-            <img class="project_image" src={`${process.env.PUBLIC_URL}${image}`} />
-            <div class={`content ${project.key}`}>
-                {renderCpp()}
-                {renderHTML()}
-                {renderCSS()}
-                {renderJS()}
-                {renderNJS()}
-                {renderReact()}
-                {renderAS()}
-                {renderKotlin()}
-                {renderUnity()}
-                {renderCSharp()}
-                {renderPostgresql()}
-                {renderPython()}
-                {renderDocker()}
-                {renderC()}
-                {renderCockroachDB()}
-            </div>
-            <div class="project_overlay">
-                <div class="project_title">{project.title}</div>
-                <p class={`project_desc ${project.key}`}>{description}</p>
-            </div>
+            <a href={project.pdf} target="blank">
+                <img class="project_image" src={`${process.env.PUBLIC_URL}${image}`} />
+                <div class={`content ${project.key}`}>
+                    {renderCpp()}
+                    {renderHTML()}
+                    {renderCSS()}
+                    {renderJS()}
+                    {renderNJS()}
+                    {renderReact()}
+                    {renderAS()}
+                    {renderKotlin()}
+                    {renderUnity()}
+                    {renderCSharp()}
+                    {renderPostgresql()}
+                    {renderPython()}
+                    {renderDocker()}
+                    {renderC()}
+                    {renderCockroachDB()}
+                    {renderFirebase()}
+                    {renderR()}
+                    {renderOpenai()}
+                </div>
+                <div class="project_overlay">
+                    <div class="project_title">{project.title}</div>
+                    <p class={`project_desc ${project.key}`}>{description}</p>
+                </div>
+            </a>
         </div>
     )
 }
