@@ -38,9 +38,7 @@ export default function Experience() {
                 icon={getExperienceIcon(experience.title)}
               >
                 <h3 className="title">
-                  <a href={experience.link} target="_blank" rel="noopener noreferrer">
-                    {experience.title}
-                  </a>
+                  {experience.title}
                 </h3>
                 <h5 className="subtitle">{experience.location}</h5>
                 <p id="desc">{descriptionElements}</p>

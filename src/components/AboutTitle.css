@@ -1,12 +1,11 @@
 .abouttitle {
     text-align: center;
-    margin-bottom: var(--spacing-md);
 }
 
 .abouttitle h2 {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 3rem, 3.5rem);
-    margin-top: var(--spacing-xs);
+    font-size: clamp(1.5rem, 2rem, 2.5rem);
+    margin-top: 0;
     margin-bottom: 0;
     text-align: center;
     letter-spacing: -0.02em;
@@ -14,25 +13,8 @@
     display: inline-block;
 }
 
-.abouttitle h2::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: var(--color-text);
-    border-radius: 2px;
-}
-
 @media only screen and (max-width: 768px) {
     .abouttitle h2 {
-        font-size: 2rem;
-    }
-
-    .abouttitle h2::after {
-        width: 40px;
-        height: 2px;
+        font-size: 1.5rem;
     }
 }

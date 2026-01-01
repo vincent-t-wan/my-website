@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <section id="projects">
       <div className="projects">
-        <h1>My Projects</h1>
+        <h1>Projects</h1>
       </div>
       <div className="projectgallery">
         {projectdata.map((project) => (
